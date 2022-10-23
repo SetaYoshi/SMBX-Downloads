@@ -11,3 +11,10 @@ SMBX38A:
 [XYZ](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX38A%2FXYZ)
 
 [Parrallaxx](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX38A%2FParrallaxx)
+
+[Custom Cheats](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX38A%2FCustom%2520Cheats)
+
+[Custom Credits](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX38A%2FCustom%2520Credits)
+
+[Faded Blocks](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX38A%2FFaded%2520Blocks)
+
