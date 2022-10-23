@@ -1,0 +1,4 @@
+immortal=1
+health=1
+score=0
+scripts=##New Script

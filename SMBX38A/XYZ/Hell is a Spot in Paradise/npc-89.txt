@@ -1,0 +1,9 @@
+npcblock=0
+noblockcollision=1
+nonpccollision=1
+spinjump=0
+jumphurt=1
+waterjumphurt=1
+spinjumphurt=0
+immortal=1
+scripts=lighningball

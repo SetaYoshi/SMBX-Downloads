@@ -1,0 +1,3 @@
+gfxwidth=800
+gfxheight=600
+frames=1

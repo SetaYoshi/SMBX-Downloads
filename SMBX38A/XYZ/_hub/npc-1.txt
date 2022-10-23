@@ -1,0 +1,8 @@
+gfxwidth=258
+gfxheight=152
+gfxoffsety=0
+frames=1
+speed=0
+nogravity=1
+noblockcollision=1
+nonpccollision=1

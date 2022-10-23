@@ -1,0 +1,6 @@
+gfxsplitheight=64
+noblockcollision=1
+nonpccollision=1
+immortal=1
+nohurt=1
+scripts=spawner

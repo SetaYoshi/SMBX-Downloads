@@ -1,0 +1,5 @@
+gfxwidth=16
+gfxsplitheight=32
+width=8
+speed=0
+scripts=##spark

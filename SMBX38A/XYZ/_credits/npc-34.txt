@@ -1,0 +1,8 @@
+gfxwidth=32
+frames=1
+framestyle=0
+width=32
+speed=1
+nonpccollision=1
+instantkill=1
+scripts=blank

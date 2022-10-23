@@ -1,0 +1,9 @@
+gfxwidth=13
+gfxheight=12
+frames=1
+width=13
+height=12
+speed=0
+nogravity=0
+nohurt=1
+scripts=##ybomb

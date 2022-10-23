@@ -1,0 +1,10 @@
+gfxwidth=18
+gfxheight=16
+frames=1
+width=18
+height=16
+speed=0
+nogravity=0
+noblockcollision=1
+nonpccollision=1
+scripts=##collectm

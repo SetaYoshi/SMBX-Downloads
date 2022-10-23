@@ -1,0 +1,5 @@
+gfxwidth=846
+gfxheight=420
+frames=1
+width=846
+height=420

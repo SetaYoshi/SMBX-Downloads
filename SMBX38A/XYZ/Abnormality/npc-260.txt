@@ -1,0 +1,2 @@
+gfxsplitheight=64
+scripts=##color

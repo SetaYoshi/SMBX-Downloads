@@ -1,0 +1,15 @@
+gfxwidth=24
+gfxoffsety=0
+width=24
+nogravity=1
+npcblock=0
+noblockcollision=1
+nonpccollision=1
+spinjump=0
+jumphurt=1
+waterjumphurt=1
+spinjumphurt=1
+yoshihurt=0
+shoehurt=0
+immortal=1
+scripts=ligntning

@@ -1,0 +1,11 @@
+- XYZ - 
+
+
+Graphics:
+  - Everything else are edited basegame images
+  
+Sounds:
+  - Victory Fanfare: Insaniquarium Deluxe
+  - Voices: https://www.naturalreaders.com/online/
+  - Hub Ambience: https://www.youtube.com/watch?v=CEVcN-6ZgEA
+  

@@ -1,0 +1,14 @@
+gfxwidth=6
+gfxheight=8
+gfxoffsety=0
+gfxsplitheight=8
+frames=1
+framestyle=0
+width=6
+height=8
+spinjump=0
+jumphurt=1
+spinjumphurt=1
+immortal=1
+nohurt=1
+scripts=##ygomb

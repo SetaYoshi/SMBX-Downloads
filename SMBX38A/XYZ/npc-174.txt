@@ -1,0 +1,5 @@
+frames=1
+gfxwidth=14
+gfxheight=36
+width=14
+height=36

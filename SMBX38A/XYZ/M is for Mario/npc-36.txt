@@ -1,0 +1,11 @@
+gfxwidth=16
+gfxheight=16
+gfxoffsety=0
+gfxsplitheight=16
+frames=1
+width=16
+height=16
+noblockcollision=1
+spinjumphurt=1
+nohurt=1
+scripts=xdrop

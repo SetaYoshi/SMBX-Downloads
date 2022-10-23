@@ -1,0 +1,10 @@
+gfxoffsety=0
+frames=1
+nogravity=1
+spinjump=0
+jumphurt=1
+waterjumphurt=1
+spinjumphurt=1
+immortal=1
+nohurt=1
+scripts=oppositeofsin

@@ -1,0 +1,8 @@
+gfxwidth=32
+gfxheight=58
+gfxoffsety=0
+frames=2
+nogravity=1
+immortal=1
+fireballdmg=0
+scripts=surfup

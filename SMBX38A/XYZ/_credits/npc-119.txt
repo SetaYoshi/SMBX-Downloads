@@ -1,0 +1,10 @@
+gfxwidth=50
+frames=2
+width=50
+nogravity=1
+npcblock=0
+noblockcollision=1
+nonpccollision=1
+nohurt=1
+explosiondmg=0
+scripts=bluefish

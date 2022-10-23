@@ -1,0 +1,5 @@
+gfxwidth=1024
+gfxheight=264
+frames=1
+width=1024
+height=264

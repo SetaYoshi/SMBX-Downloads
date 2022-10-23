@@ -1,0 +1,4 @@
+gfxwidth=32
+gfxheight=32
+frames=1
+scripts=##coinai

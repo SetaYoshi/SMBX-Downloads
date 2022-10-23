@@ -1,0 +1,2 @@
+nohurt=1
+scripts=##blank

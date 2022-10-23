@@ -1,0 +1,6 @@
+frames=1
+playerblocktop=1
+immortal=0
+nohurt=1
+score=0
+scripts=##jumpspikeai

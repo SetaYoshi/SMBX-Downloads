@@ -1,0 +1,3 @@
+gfxsplitheight=256
+playerblocktop=0
+spinjump=1

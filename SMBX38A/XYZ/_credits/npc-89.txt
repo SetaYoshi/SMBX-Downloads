@@ -1,0 +1,15 @@
+gfxwidth=64
+gfxheight=64
+gfxoffsety=0
+frames=6
+framespeed=10
+zposition=0.949999988079071
+width=64
+height=64
+speed=0
+nogravity=1
+noblockcollision=1
+spinjump=0
+immortal=1
+nohurt=1
+scripts=poofai

@@ -1,0 +1,5 @@
+gfxoffsety=0
+frames=3
+framespeed=16
+speed=0
+scripts=##bone

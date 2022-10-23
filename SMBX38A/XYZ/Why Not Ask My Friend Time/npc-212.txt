@@ -1,0 +1,4 @@
+gfxwidth=128
+gfxsplitheight=32
+width=128
+scripts=##bricks break

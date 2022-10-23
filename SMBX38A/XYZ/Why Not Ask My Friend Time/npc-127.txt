@@ -1,0 +1,8 @@
+gfxwidth=16
+gfxheight=16
+gfxoffsety=-8
+gfxsplitheight=16
+frames=1
+noblockcollision=1
+nonpccollision=1
+scripts=blank_real

@@ -1,0 +1,2 @@
+gfxwidth=1500
+gfxheight=600

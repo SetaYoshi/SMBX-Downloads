@@ -1,0 +1,3 @@
+gfxwidth=1141
+gfxheight=1200
+frames=1

@@ -1,0 +1,5 @@
+frames=1
+gfxwidth=18
+gfxheight=18
+width=20
+height=18

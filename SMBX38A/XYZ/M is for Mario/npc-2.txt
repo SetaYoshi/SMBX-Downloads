@@ -1,0 +1,14 @@
+gfxwidth=114
+gfxheight=140
+gfxoffsety=0
+gfxsplitheight=64
+frames=1
+framestyle=0
+width=114
+height=140
+speed=0
+nogravity=1
+nohurt=1
+health=25
+hammerdmg=1
+scripts=##yboss

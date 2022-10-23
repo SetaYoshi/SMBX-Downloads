@@ -1,0 +1,5 @@
+frames=1
+gfxwidth=9
+gfxheight=9
+width=10
+height=9

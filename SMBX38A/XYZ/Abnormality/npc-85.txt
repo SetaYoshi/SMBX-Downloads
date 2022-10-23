@@ -1,0 +1,3 @@
+gfxwidth=1024
+gfxheight=600
+frames=1

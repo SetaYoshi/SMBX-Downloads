@@ -1,0 +1,2 @@
+grabside=0
+immortal=1
