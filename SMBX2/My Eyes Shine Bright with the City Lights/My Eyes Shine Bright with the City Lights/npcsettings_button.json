@@ -1,0 +1,14 @@
+{
+	"style" : "groupbox",
+	"title" : "Button Settings",
+	"layout": [
+		{
+			"control": "checkbox",
+			"name": "broken",
+			"title": "Only work once?",
+			"tooltip": "If checked, the button will break after one use",
+			"text-visible": false,
+			"value-default": false
+		}
+	]
+}

@@ -1,0 +1,17 @@
+gfxwidth=32
+gfxheight=32
+framestyle=0
+width=32
+height=32
+score=1
+health=5
+jumpdmg=1
+speed=0
+nofireball=1
+nohammer=1
+noiceball=1
+noyoshi=1
+noleaf=1
+noblockhit=1
+spinjump=0
+scripts=##LittleBeetle

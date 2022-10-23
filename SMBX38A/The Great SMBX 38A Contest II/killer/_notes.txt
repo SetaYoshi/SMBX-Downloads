@@ -1,0 +1,2 @@
+-refrain from using powerups, there is only a small and big player graphic
+-refrain from using anyone but mario, no player graphic

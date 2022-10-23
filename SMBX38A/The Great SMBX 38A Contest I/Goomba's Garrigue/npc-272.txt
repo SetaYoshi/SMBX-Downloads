@@ -1,0 +1,12 @@
+framespeed=6
+framestyle=1
+playerblocktop=0
+npcblock=0
+npcblocktop=0
+noblockcollision=0
+grabtop=0
+nogravity=0
+nofireball=0
+spinjump=1
+yoshihurt=1
+scripts=Mounty Mole

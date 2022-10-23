@@ -1,0 +1,5 @@
+gfxwidth=36
+gfxheight=32
+frames=15
+framespeed=3
+width=36

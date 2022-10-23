@@ -1,0 +1,9 @@
+gfxwidth=800
+gfxheight=608
+frames=8
+width=800
+height=608
+immortal=1
+foreground=1
+zposition=0
+blendmode=66053

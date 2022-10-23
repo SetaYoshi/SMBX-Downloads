@@ -1,0 +1,4 @@
+nogravity=1
+immortal=1
+holdgenerator=0,0,210,5,0,0,1,0,0
+scripts=p2

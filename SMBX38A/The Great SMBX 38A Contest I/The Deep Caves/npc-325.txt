@@ -1,0 +1,9 @@
+gfxwidth=64
+gfxheight=48
+frames=4
+framestyle=1
+zposition=0.8
+width=64
+height=32
+immortal=1
+score=0

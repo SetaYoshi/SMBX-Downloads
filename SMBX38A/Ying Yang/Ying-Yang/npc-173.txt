@@ -1,0 +1,7 @@
+gfxwidth=32
+width=1632
+height=32
+shoehurt=0
+yoshihurt=0
+spinjump=0
+immortal=1

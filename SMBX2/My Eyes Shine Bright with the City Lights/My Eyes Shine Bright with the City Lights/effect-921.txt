@@ -1,0 +1,10 @@
+[1]
+import=AI_ARC
+frames=4
+framestyle=0
+
+[2]
+import=AI_ARC
+frames=4
+framestyle=0
+

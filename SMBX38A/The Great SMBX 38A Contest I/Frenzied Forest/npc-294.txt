@@ -1,0 +1,6 @@
+gfxwidth=32
+gfxheight=30
+width=32
+height=30
+nohurt=1
+jumphurt=0

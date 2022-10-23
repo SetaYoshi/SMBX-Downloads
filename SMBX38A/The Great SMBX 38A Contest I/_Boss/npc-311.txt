@@ -1,0 +1,3 @@
+spinjump=1
+spinjumphurt=0
+immortal=1

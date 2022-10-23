@@ -1,0 +1,16 @@
+gfxwidth=64
+gfxheight=64
+gfxoffsety=2
+width=64
+height=60
+score=4
+speed=5
+npcblock=1
+npcblocktop=1
+grabside=0
+grabtop=0
+nofireball=1
+nohammer=1
+noiceball=1
+noyoshi=1
+noleaf=1

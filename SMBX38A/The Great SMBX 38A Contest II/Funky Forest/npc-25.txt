@@ -1,0 +1,9 @@
+gfxheight=42
+framestyle=1
+height=42
+frozentime=110
+playerblocktop=0
+npcblocktop=0
+grabtop=0
+noyoshi=1
+jumphurt=1

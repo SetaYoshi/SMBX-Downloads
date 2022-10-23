@@ -1,0 +1,16 @@
+gfxheight=28
+gfxoffsety=6
+frames=3
+height=24
+health=2
+fireballdmg=0
+jumpdmg=1
+hammerdmg=0
+shelldmg=0
+sworddmg=0
+iceballdmg=0
+lavadmg=0
+explosiondmg=0
+blockhitdmg=0
+tailspindmg=0
+scripts=Grenade2

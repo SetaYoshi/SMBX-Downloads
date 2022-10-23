@@ -1,0 +1,16 @@
+gfxoffsety=0
+frames=1
+health=10
+fireballdmg=1
+jumpdmg=1
+hammerdmg=1
+shelldmg=1
+lavadmg=1
+explosiondmg=1
+blockhitdmg=1
+tailspindmg=1
+frozentime=30
+sworddmg=1
+iceballdmg=1
+immortal=1
+scripts=BossStart

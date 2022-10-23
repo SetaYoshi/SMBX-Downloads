@@ -1,0 +1,4 @@
+frames=1
+playerblocktop=1
+immortal=1
+scripts=##jumpSpikeAI

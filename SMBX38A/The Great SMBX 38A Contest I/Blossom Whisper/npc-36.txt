@@ -1,0 +1,5 @@
+gfxwidth=45
+gfxheight=39
+gfxoffsety=2
+frames=30
+framespeed=2

@@ -1,0 +1,10 @@
+gfxoffsety=0
+gfxwidth=160
+gfxheight=160
+width=160
+height=160
+noblockcollision=1
+nogravity=1
+frames=3
+framespeed=16
+framestyle=0

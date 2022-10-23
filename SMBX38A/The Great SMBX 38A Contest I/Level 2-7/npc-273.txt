@@ -1,0 +1,10 @@
+gfxheight=64
+gfxwidth=50
+frames=3
+framespeed=10
+height=64
+width=50
+playerblock=0
+npcblock=0
+noyoshi=1
+speed=0,00

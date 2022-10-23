@@ -1,0 +1,7 @@
+gfxwidth=64
+gfxheight=48
+gfxoffsety=16
+frames=2
+framestyle=1
+zposition=0.8
+gfxsplitheight=192

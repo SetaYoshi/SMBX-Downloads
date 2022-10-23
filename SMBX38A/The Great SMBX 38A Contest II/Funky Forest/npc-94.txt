@@ -1,0 +1,6 @@
+gfxwidth=80
+gfxheight=44
+width=80
+height=44
+nogravity=1
+nohurt=1

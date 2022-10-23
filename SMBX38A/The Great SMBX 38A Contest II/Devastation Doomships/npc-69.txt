@@ -1,0 +1,10 @@
+gfxwidth=72
+gfxheight=72
+gfxoffsetx=1
+gfxoffsety=8
+frames=2
+framespeed=100
+width=64
+height=64
+nogravity=1
+scripts=NPC-69 'n' NPC-328

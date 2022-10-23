@@ -1,0 +1,9 @@
+Credits
+Sednaiur for his SMW dark castle tileset.
+Lx xZit for his Thwimp script.
+The guy named "GreenMario" for his "Block Switching like in SMG but jumping instead" script.
+
+Level specifications
+The level can be played with any characters and may be Link but due to his speed and "accuracy", it makes the level semi-unplayable for him. I recommend playing as Toad because of his speed and his fireball "bounce height".
+Difficulty: 1/2 star difficulty =/= Semi-easy *shrugs*
+The level itself, may take a long time to load due to the number of blocks, NPCs, whatsoever and possible lags may occur.

@@ -1,0 +1,4 @@
+gfxheight=36
+playerblocktop=0
+npcblocktop=0
+grabtop=0

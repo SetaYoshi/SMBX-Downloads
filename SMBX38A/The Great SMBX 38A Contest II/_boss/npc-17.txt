@@ -1,0 +1,4 @@
+gfxheight=32
+height=32
+speed=1
+scripts=BulletBill

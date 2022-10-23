@@ -1,0 +1,3 @@
+gfxwidth=96
+nogravity=1
+scripts=Boss2

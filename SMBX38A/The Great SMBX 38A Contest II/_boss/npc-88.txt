@@ -1,0 +1,10 @@
+gfxwidth=166
+gfxheight=44
+frames=1
+framespeed=1
+framestyle=3
+width=166
+height=44
+immortal=1
+foreground=0
+scripts=HPBar

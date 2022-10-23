@@ -1,0 +1,2 @@
+frames=16
+framespeed=2

@@ -1,0 +1,9 @@
+gfxwidth=32
+gfxheight=1232
+gfxoffsety=0
+frames=1
+height=1232
+noblockcollision=1
+nogravity=1
+immortal=1
+scripts=laser2

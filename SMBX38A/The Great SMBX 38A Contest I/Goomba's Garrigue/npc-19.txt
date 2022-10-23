@@ -1,0 +1,12 @@
+framestyle=1
+playerblocktop=0
+npcblock=0
+npcblocktop=0
+grabtop=0
+nofireball=0
+nohammer=0
+noiceball=0
+noyoshi=0
+spinjump=1
+foreground=0
+scripts=MM

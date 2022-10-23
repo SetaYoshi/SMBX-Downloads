@@ -1,0 +1,3 @@
+gfxheight=50
+gfxoffsetx=0
+gfxoffsety=2

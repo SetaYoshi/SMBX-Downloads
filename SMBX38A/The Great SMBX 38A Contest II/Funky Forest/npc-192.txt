@@ -1,0 +1,8 @@
+gfxwidth=74
+gfxheight=138
+gfxoffsety=0
+frames=7
+framespeed=4
+width=72
+height=138
+forground=1

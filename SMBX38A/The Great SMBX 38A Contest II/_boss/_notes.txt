@@ -1,0 +1,10 @@
+--CREDITS--
+Backgrounds - Super Mario World (1st one is Original, 2nd one is Edited);
+Ground/Scenery - Super Mario Maker (Recolored);
+Cannons - Super Mario World/Super Mario Maker;
+Quad Cannon - Sprites by SoldierKoopa0, Script by NajekK;
+Enemies - Ninji/Bombs by SoldierKoopa0, Shy Guys/Snifits by Kirbypoyo567 (Additional edits by SoldierKoopa0), Para-Spiny from Super Mario Maker (Scripts by TheCreator520);
+Musics - (in order) Miguel Volkov, PDStep22;
+Some powerups - AwesomeZack (Recolored);
+Brick Block - SoldierKoopa0;
+Boss (Bowser Jr.) - AwesomeZack;

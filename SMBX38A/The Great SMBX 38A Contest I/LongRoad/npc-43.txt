@@ -1,0 +1,13 @@
+frames=4
+framespeed=8
+framestyle=1
+nolava=1
+nofireball=1
+nohammer=1
+noiceball=1
+noyoshi=1
+noleaf=1
+noblockhit=1
+nopiercingdmg=1
+immortal=1
+scripts=##boo

@@ -1,0 +1,12 @@
+gfxwidth=44
+gfxheight=38
+frames=9
+framespeed=2
+framestyle=1
+width=44
+height=38
+frozentime=74
+nofireball=1
+noiceball=1
+noyoshi=0
+cliffturn=1

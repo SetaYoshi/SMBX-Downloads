@@ -1,0 +1,5 @@
+gfxwidth=96
+gfxheight=22
+width=96
+height=22
+brightness=90

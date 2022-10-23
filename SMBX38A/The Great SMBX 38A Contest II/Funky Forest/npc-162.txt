@@ -1,0 +1,9 @@
+gfxwidth=46
+gfxheight=74
+frames=7
+framespeed=5
+framestyle=1
+width=46
+height=74
+frozentime=120
+cliffturn=1

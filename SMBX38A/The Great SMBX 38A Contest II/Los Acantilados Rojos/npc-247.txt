@@ -1,0 +1,7 @@
+gfxwidth=44
+gfxheight=48
+gfxoffsety=0
+width=44
+height=28
+playerblocktop=0
+jumphurt=1

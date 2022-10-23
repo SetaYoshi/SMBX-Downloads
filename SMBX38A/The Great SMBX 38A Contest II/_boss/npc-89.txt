@@ -1,0 +1,10 @@
+gfxwidth=40
+gfxheight=40
+gfxoffsetx=0
+gfxoffsety=0
+frames=4
+framespeed=4
+width=32
+height=24
+explosiondmg=0
+scripts=Grenade1

@@ -1,0 +1,2 @@
+gfxwidth=1
+gfxheight=1

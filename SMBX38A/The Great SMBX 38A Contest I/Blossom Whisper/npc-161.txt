@@ -1,0 +1,5 @@
+gfxwidth=67
+gfxheight=72
+gfxoffsety=8
+frames=12
+framespeed=3

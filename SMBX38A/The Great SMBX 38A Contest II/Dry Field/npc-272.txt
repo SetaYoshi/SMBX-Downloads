@@ -1,0 +1,16 @@
+gfxheight=36
+framespeed=4
+framestyle=1
+playerblocktop=0
+npcblock=0
+npcblocktop=0
+noblockcollision=0
+nogravity=0
+grabtop=0
+nofireball=0
+jumphurt=1
+spinjump=1
+yoshihurt=1
+jumpdmg=0
+speed=1
+scripts=Mounty Mole

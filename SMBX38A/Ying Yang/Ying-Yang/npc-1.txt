@@ -1,0 +1,2 @@
+gfxoffsety=0
+gfxsplitheight=64

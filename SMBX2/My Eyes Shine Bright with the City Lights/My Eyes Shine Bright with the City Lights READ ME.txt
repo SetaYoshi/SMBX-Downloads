@@ -1,0 +1,23 @@
+Level Name: My Eyes Shine Bright with the City Lights
+
+The level should be played as small mario. The level will automatically filter you.
+There is only one exit.
+
+-- Credits --
+
+Music:
+Boutique [Pokémon: X & Y] - https://www.youtube.com/watch?v=_Zf9x4K4BVk
+
+Libs:
+Antizip, PlayerPhysicsPatch, CoyoteTime, Spawnzones - Enjl
+
+Tileset:
+SMW City TileSet - SuperLuigiBros, Fireseraphim, SilverDeoxys
+Stoplight - u/Herets
+
+NPCs:
+Ring Burner - Enjl
+Button - Void
+
+Sounds:
+Traffic Sounds - https://www.youtube.com/watch?v=-rvc63Ez6DM

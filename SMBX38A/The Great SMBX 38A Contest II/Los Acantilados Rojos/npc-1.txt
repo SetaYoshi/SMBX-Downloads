@@ -1,0 +1,4 @@
+gfxwidth=40
+frames=16
+framespeed=2
+framestyle=1

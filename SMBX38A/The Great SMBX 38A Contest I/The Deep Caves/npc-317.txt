@@ -1,0 +1,14 @@
+health=1
+fireballdmg=1
+jumpdmg=0
+hammerdmg=1
+shelldmg=1
+sworddmg=1
+lavadmg=1
+explosiondmg=1
+blockhitdmg=1
+tailspindmg=1
+nofireball=0
+nohammer=0
+noiceball=0
+noleaf=0

@@ -1,0 +1,5 @@
+fireballdmg=1
+jumpdmg=1
+explosiondmg=1
+speed=0
+scripts=##Damage

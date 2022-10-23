@@ -1,0 +1,2 @@
+blendmode=0
+scripts=##coinAI

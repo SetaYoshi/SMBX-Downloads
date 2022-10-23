@@ -1,0 +1,6 @@
+gfxwidth=36
+gfxheight=52
+frames=2
+framespeed=10
+width=36
+height=52

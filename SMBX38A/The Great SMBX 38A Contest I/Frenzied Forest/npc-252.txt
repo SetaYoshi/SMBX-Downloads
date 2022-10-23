@@ -1,0 +1,9 @@
+gfxwidth=800
+gfxheight=608
+frames=14
+framestyle=4
+width=800
+height=608
+immortal=1
+foreground=1
+blendmode=66053

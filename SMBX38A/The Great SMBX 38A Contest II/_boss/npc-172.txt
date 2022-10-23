@@ -1,0 +1,5 @@
+gfxwidth=158
+gfxheight=40
+frames=1
+zposition=0.01
+nogravity=1

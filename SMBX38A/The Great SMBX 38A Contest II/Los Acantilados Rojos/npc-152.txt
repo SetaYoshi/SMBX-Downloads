@@ -1,0 +1,5 @@
+gfxwidth=52
+gfxheight=55
+frames=1
+width=52
+height=55

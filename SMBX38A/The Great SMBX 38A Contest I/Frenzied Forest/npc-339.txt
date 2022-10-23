@@ -1,0 +1,2 @@
+yoshitransform=-1
+noyoshi=0

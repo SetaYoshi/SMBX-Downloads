@@ -1,0 +1,5 @@
+gfxwidth=56
+gfxheight=48
+frames=33
+framespeed=3
+gfxsplitheight=1584

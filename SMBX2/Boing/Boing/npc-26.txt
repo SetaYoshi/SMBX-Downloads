@@ -1,0 +1,3 @@
+gfxoffsety=0
+gfxheight=32
+height=30

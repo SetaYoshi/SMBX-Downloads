@@ -1,0 +1,11 @@
+gfxwidth=154
+gfxheight=78
+frames=2
+framestyle=1
+width=154
+height=78
+speed=1.2
+noblockcollision=1
+jumphurt=1
+immortal=1
+foreground=0

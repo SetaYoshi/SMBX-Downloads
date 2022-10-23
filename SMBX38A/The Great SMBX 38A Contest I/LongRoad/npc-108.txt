@@ -1,0 +1,10 @@
+gfxwidth=16
+gfxheight=16
+frames=4
+framespeed=4
+framestyle=0
+width=16
+height=16
+noblockcollision=1
+noblockhit=1
+immortal=0

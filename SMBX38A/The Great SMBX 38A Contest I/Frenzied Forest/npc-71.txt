@@ -1,0 +1,17 @@
+gfxwidth=64
+gfxheight=64
+framespeed=10
+framestyle=1
+width=64
+height=64
+health=2
+fireballdmg=2
+jumpdmg=1
+hammerdmg=2
+shelldmg=2
+sworddmg=2
+lavadmg=2
+explosiondmg=2
+blockhitdmg=2
+tailspindmg=2
+scripts=Giant Goomba & Mega Goomba

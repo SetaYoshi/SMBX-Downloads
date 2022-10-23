@@ -1,0 +1,8 @@
+gfxwidth=42
+gfxheight=36
+frames=7
+framespeed=2
+framestyle=1
+width=42
+height=36
+frozentime=190

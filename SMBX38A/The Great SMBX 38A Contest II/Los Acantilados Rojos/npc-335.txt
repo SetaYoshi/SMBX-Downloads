@@ -1,0 +1,7 @@
+gfxwidth=84
+gfxheight=87
+gfxoffsety=5
+frames=17
+framespeed=2
+framestyle=1
+height=64

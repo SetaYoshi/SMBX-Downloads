@@ -1,0 +1,6 @@
+width=16
+gfxwidth=16
+height=16
+gfxheight=16
+nogravity=1
+nohurt=1

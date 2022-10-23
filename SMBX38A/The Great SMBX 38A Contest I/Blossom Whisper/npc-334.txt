@@ -1,0 +1,4 @@
+gfxwidth=75
+gfxheight=75
+frames=17
+framespeed=3

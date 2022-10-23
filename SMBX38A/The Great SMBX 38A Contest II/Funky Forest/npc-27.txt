@@ -1,0 +1,9 @@
+scripts=CC
+framestyle=1
+health=2
+jumpdmg=1
+fireballdmg=1
+noiceball=1
+hammerdmg=1
+tailspindmg=1
+blockhitdmg=1

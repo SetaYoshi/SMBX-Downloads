@@ -1,0 +1,11 @@
+gfxwidth=32
+gfxheight=64
+frames=2
+framestyle=0
+width=32
+height=32
+brightness=44
+playerblocktop=0
+npcblocktop=0
+grabtop=0
+nofireball=0

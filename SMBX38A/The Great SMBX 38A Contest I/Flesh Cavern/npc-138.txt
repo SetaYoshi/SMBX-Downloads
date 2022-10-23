@@ -1,0 +1,9 @@
+gfxwidth=64
+gfxheight=64
+gfxoffsety=0
+frames=9
+framespeed=12
+framestyle=0
+width=64
+height=64
+noblockcollision=1

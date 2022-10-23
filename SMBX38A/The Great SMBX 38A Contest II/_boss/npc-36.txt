@@ -1,0 +1,3 @@
+gfxwidth=44
+gfxheight=40
+scripts=flyingspiny

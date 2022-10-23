@@ -1,0 +1,2 @@
+gfxheight=32
+framespeed=16

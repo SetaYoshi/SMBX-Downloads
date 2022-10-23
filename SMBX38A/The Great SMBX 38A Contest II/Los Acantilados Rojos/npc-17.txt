@@ -1,0 +1,7 @@
+width=50
+height=32
+gfxwidth=50
+gfxheight=32
+frames=17
+framespeed=3
+speed=0.6

@@ -1,0 +1,8 @@
+gfxwidth=1632
+gfxoffsety=0
+frames=1
+width=1632
+noblockcollision=1
+nogravity=1
+immortal=1
+scripts=laser1

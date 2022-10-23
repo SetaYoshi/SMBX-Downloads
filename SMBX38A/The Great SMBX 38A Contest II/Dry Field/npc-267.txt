@@ -1,0 +1,4 @@
+height=52
+nofireball=1
+health=20
+hammerdmg=5

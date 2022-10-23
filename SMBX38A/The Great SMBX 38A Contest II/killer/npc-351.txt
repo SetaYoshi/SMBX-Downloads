@@ -1,0 +1,7 @@
+gfxoffsety=0
+framespeed=6
+width=32
+height=32
+jumphurt=1
+spinjump=0
+immortal=1

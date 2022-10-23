@@ -1,0 +1,6 @@
+gfxwidth=18
+gfxheight=18
+frames=2
+framespeed=3
+width=18
+height=18

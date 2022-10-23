@@ -1,0 +1,8 @@
+height=24
+width=32
+gfxheight=26
+gfxwidth=32
+framestyle=1
+framespeed=6
+frames=2
+noyoshi=0

@@ -1,0 +1,10 @@
+gfxwidth=98
+gfxheight=54
+gfxoffsety=0
+frames=5
+framespeed=2
+width=98
+height=54
+speed=0
+noblockcollision=1
+nogravity=1

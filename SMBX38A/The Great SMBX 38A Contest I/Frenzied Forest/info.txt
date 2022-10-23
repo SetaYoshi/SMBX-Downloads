@@ -1,0 +1,13 @@
+Donkey Kong Country
+Dumped by: Datschge
+ID666 tags by: Datschge
+Downloaded from: http://snesmusic.org
+
+Update 2:
+-Fixed a mix-up between track titles and composer names in the first few tracks.
+-Composer credit added for "Cranky's Theme".
+-"Game Over" renamed and added into the main tracklist as per DK Jamz OST.
+-Two extra jingles added.
+
+Update:
+-Track 4 redumped without sound effect.

@@ -1,0 +1,2 @@
+gfxheight=16
+height=16

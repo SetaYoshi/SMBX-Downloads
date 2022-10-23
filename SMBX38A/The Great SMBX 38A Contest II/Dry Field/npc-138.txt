@@ -1,0 +1,8 @@
+gfxwidth=32
+frames=2
+framespeed=6
+framestyle=1
+width=32
+height=32
+foreground=1
+scripts=Mounty Mole Hole

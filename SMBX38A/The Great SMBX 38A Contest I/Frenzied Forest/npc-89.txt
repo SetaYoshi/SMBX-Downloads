@@ -1,0 +1,3 @@
+speed=0
+noiceball=1
+immortal=1

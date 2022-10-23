@@ -1,0 +1,4 @@
+gfxwidth=32
+frames=3
+width=32
+scripts=##coinAI

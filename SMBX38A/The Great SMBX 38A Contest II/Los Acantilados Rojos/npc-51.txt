@@ -1,0 +1,8 @@
+gfxwidth=64
+gfxheight=80
+gfxoffsety=0
+frames=71
+framespeed=1
+width=50
+height=80
+foreground=0

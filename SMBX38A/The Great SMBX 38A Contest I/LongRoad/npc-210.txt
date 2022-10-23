@@ -1,0 +1,5 @@
+scripts=##rinkas
+gfxwidth=32
+framespeed=4
+width=32
+speed=2.3

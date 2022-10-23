@@ -1,0 +1,7 @@
+gfxwidth=34
+gfxheight=29
+frames=6
+framespeed=3
+framestyle=1
+width=34
+height=29
