@@ -1,0 +1,5 @@
+[1]
+frames=5
+framestyle=0
+framespeed=4
+lifetime=20

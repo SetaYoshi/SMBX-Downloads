@@ -1,0 +1,13 @@
+{
+	"style" : "groupbox",
+	"title" : "Flamethrower Properties",
+	"layout": [
+        {
+			"control": "lineEdit",
+			"name": "angle",
+			"title": "Angle",
+			"tooltip": "The angle, in degrees & counterclockwise, the spawned flames travel will travel to.",
+			"value-default": "0"
+		}
+	]
+}

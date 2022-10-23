@@ -1,0 +1,68 @@
+{
+	"style" : "groupbox",
+	"title" : "Control Chip Properties",
+	"layout": [
+        {
+			"control": "spinBox",
+			"type": "int",
+			"name": "onTime",
+			"title": "On Time",
+			"tooltip": "How long should the NPC be powered?",
+			"value-default": 200,
+			"value-min": 1,
+			"value-max": 99999,
+			"single-step": 1
+		},
+		{
+			"control": "spinBox",
+			"type": "int",
+			"name": "offTime",
+			"title": "Off Time",
+			"tooltip": "Cooldown amount. Set to 0 and the NPC will be permenantly powered.",
+			"value-default": 200,
+			"value-min": 0,
+			"value-max": 99999,
+			"single-step": 1
+		},
+		{
+			"control": "spinBox",
+			"type": "int",
+			"name": "powerlevel",
+			"title": "Power",
+			"tooltip": "The power output of the NPC.",
+			"value-default": 15,
+			"value-min": 0,
+			"value-max": 15,
+			"single-step": 1
+		},
+		{
+			"control": "checkbox",
+			"name": "active",
+			"title": "Begin on?",
+			"tooltip": "If checked, the chip will begin powering.",
+			"text-visible": false,
+			"value-default": true
+		},
+		{
+		"control" : "group",
+		"title" : "",
+		"name" : "..",
+		"children": [
+			{
+			"control": "checkbox",
+			"name": "advanced",
+			"title": "Use advanced setting?",
+			"tooltip": "If checked, the chip will instead use your custom function to control the chip.",
+			"text-visible": false,
+			"value-default": false
+			},
+			{
+			"control": "multiLineEdit",
+			"name": "func",
+			"title": "Advanced Control",
+			"tooltip": "The function that controls the chip",
+			"value-default": ""
+			}	
+		]}
+	]
+}

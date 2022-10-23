@@ -1,0 +1,17 @@
+{
+	"style" : "groupbox",
+	"title" : "Flame Properties",
+	"layout": [
+        {
+			"control": "spinBox",
+			"type": "int",
+			"name": "angle",
+			"title": "Angle",
+			"tooltip": "The angle, in degrees & counterclockwise, the flame travel will travel to.",
+			"value-default": 0,
+			"value-min": -360,
+			"value-max": 360,
+			"single-step": 0.1
+		}
+	]
+}

@@ -1,0 +1,40 @@
+Creator and Programmer:
+  - SetaYoshi
+ 
+Certain NPCs are possible thanks to:
+  - Mr.DoubleA
+  - The0x139
+  
+NPC Graphics:
+  - Greendan
+  - koob_noob
+  - SetaYoshi
+  - Voider
+  
+Test Level:
+  - 8luestorm
+  - SetaYoshi
+  
+Test Level Graphics:
+  - Grass Extended tiles is by 8luestorm
+  - In-ground redstone is ripped from Minecraft and adapted to the image
+  - Ghost House tileset is by DanxInc
+  - Diagonal Ghost House Beams are Valtteri's, adapted by 8luestorm
+  - Waterfall is Valtteri's
+  - Casino Tileset is by 8luestorm
+  - Casino's Background is h2643's, fixed by 8luestorm
+  - Casino Flags are Red Yoshi's
+  - Factory tileset is by Linkstorm Z, recolored by 8luestorm
+  - Factory Background is by 8luestorm
+  - Pipes in the factory are by Valtteri, recolored by 8luestorm
+  
+Test Level Music:
+  - Yoshi Village - Mario & Luigi: Partners in Time [OST]
+  - SMW Custom Music - Track 374 (CUSTOM (Kc1336) - Mysterious Cave)
+  - Pokémon Super Mystery Dungeon - Lets Go to School
+  - Marshmallow Castle - Kirby Super Star
+  - Go with the Bros - Mario Luigi Dream Team Music
+  - Top Hat Tower (As Frog)- Super Mario Odyssey OST
+  - Dual Destinies OST 2-02 Yuri Cosmos Head of the Center of the Universe
+  
+  

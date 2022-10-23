@@ -1,0 +1,33 @@
+{
+	"style" : "groupbox",
+	"title" : "Chest Properties",
+	"layout": [
+		{
+			"control": "comboBox",
+			"name": "type",
+			"title": "Type",
+			"type": "int",
+			"tooltip": "Which subvariation should it use? Check the behavior section in the NPC's tooltip for more info.",
+			"value-default": 0,
+			"elements": ["Chest", "Barrel", "Ender"]
+		},	
+		{
+			"control": "lineEdit",
+			"name": "inv",
+			"title": "Inventory",
+			"tooltip": "What is the inventory item ID? You can put multiple IDs by separating them by commas. ex <i>1, 2, 3</i>",
+			"value-default": "0"
+		},		
+		{
+			"control": "spinBox",
+			"name": "quantity",
+			"title": "Quantity",
+			"type": "int",
+			"tooltip": "For barrels only, how many items can it dispense before breaking?",
+			"value-default": 0,
+			"value-min": 1,
+			"value-max": 999,
+			"single-step": 1
+		}
+	]
+}

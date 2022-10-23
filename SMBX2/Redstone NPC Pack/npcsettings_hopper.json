@@ -1,0 +1,26 @@
+{
+	"style" : "groupbox",
+	"title" : "Hopper Properties",
+	"layout": [
+		{
+			"control": "comboBox",
+			"name": "dir",
+			"title": "Direction",
+			"type": "int",
+			"tooltip": "What direction should it face?",
+			"value-default": 0,
+			"elements": ["Left", "Up", "Right", "Down"]
+		},
+		{
+			"control": "spinBox",
+			"type": "int",
+			"name": "inv",
+			"title": "Inventory",
+			"tooltip": "What inventory ID should the dropper begin with? After spawning an NPC this gets set to 0. Use another hopper or a chest to refill this hopper.",
+			"value-default": 0,
+			"value-min": -9999,
+			"value-max": 9999,
+			"single-step": 1
+		}
+	]
+}

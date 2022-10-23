@@ -1,0 +1,31 @@
+{
+	"style" : "groupbox",
+	"title" : "Lectern Properties",
+	"layout": [
+		{
+			"control": "spinBox",
+			"name": "page",
+			"title": "Starting Page",
+			"type": "int",
+			"tooltip": "The lectern will begin at this page when opened for the first time",
+			"value-default": 1,
+			"value-min": 1,
+			"value-max": 999,
+			"single-step": 1
+		},
+		{
+			"control": "multiLineEdit",
+			"name": "text",
+			"title": "Text",
+			"tooltip": "The text of the lectern. Split your text into pages by splitting them with the pipe '|' symbol. Use '<pipe>' to insert a pipe symbol",
+			"value-default": "Page 1|Page 2|Page 3"
+		},
+		{
+			"control": "lineEdit",
+			"name": "texture",
+			"title": "Texture",
+			"tooltip": "You can add an optional texture image for the textbox. Here add the filepath of the image.",
+			"value-default": ""
+		}
+	]
+}

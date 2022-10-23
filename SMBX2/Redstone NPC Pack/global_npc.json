@@ -1,0 +1,13 @@
+{
+	"style" : "groupbox",
+	"title" : "Red Tag",
+	"layout": [
+		{
+			"control": "lineEdit",
+			"name": "redTag",
+			"title": "Tag",
+			"tooltip": "Tag name of this NPC. Use redstone.getByTag(tagname) to get this NPC",
+			"value-default": ""
+		}
+	]
+}

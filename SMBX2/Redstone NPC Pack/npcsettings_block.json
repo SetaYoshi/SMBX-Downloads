@@ -1,0 +1,17 @@
+{
+	"style" : "groupbox",
+	"title" : "Block Properties",
+	"layout": [
+        {
+			"control": "spinBox",
+			"type": "int",
+			"name": "mapX",
+			"title": "Map",
+			"tooltip": "What version of graphic should be displayed? Set to 0 to make it invisible",
+			"value-default": 1,
+			"value-min": 0,
+			"value-max": 99,
+			"single-step": 1
+		}
+	]
+}

@@ -1,0 +1,51 @@
+{
+	"style" : "groupbox",
+	"title" : "Dropper Properties",
+	"layout": [
+		{
+			"control": "comboBox",
+			"type": "int",
+			"name": "type",
+			"title": "Type",
+			"tooltip": "Which subvariation should it use? Check the behavior section in the NPC's tooltip for more info.",
+			"value-default": 0,
+			"elements": ["Dropper", "Dispenser"]
+		},	
+		{
+			"control": "comboBox",
+			"name": "dir",
+			"title": "Direction",
+			"type": "int",
+			"tooltip": "What direction should it face?",
+			"value-default": 0,
+			"elements": ["Left", "Up", "Right", "Down"]
+		},		
+		{
+			"control": "spinBox",
+			"type": "int",
+			"name": "inv",
+			"title": "Inventory",
+			"tooltip": "What inventory ID should the dropper begin with? After spawning an NPC this gets set to 0. Use hoppers to refill the dropper.",
+			"value-default": 0,
+			"value-min": 0,
+			"value-max": 1000,
+			"single-step": 1
+		},
+		{
+			"control": "checkbox",
+			"name": "autofire",
+			"title": "Autofire",
+			"tooltip": "If checked, the dropper will instantly spawn the NPC without waiting for redstone power",
+			"text-visible": false,
+			"value-default": false
+		},
+		{
+			"control": "checkbox",
+			"name": "overwrite",
+			"title": "Overwrite Mode",
+			"tooltip": "Normally, the dropper will only accept an inventory ID if its inventory slot is 0. If this is checked, hoppers will always override the inventory slot",
+			"text-visible": false,
+			"value-default": false
+		}	
+	]
+}

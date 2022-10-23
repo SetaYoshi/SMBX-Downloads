@@ -1,0 +1,13 @@
+{
+	"style" : "groupbox",
+	"title" : "Reflector Settings",
+	"layout": [	
+        {
+			"control": "lineEdit",
+			"name": "angle",
+			"title": "Angle",
+			"tooltip": "The angle, in degrees & counterclockwise, the reflector's normal should face",
+			"value-default": "0"
+		}	
+	]
+}

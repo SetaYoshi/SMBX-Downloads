@@ -1,0 +1,22 @@
+{
+	"style" : "groupbox",
+	"title" : "Command Block Properties",
+	"layout": [
+		{
+			"control": "comboBox",
+			"name": "type",
+			"title": "Type",
+			"type": "int",
+			"tooltip": "Which subvariation should it use? Check the behavior section in the NPC's tooltip for more info.",
+			"value-default": 0,
+			"elements": ["Pulse", "Repeating"]
+		},
+		{
+			"control": "multiLineEdit",
+			"name": "script",
+			"title": "Script",
+			"tooltip": "The script that will be executed. Check the environment section in the NPC's tooltip for more info.",
+			"value-default": ""
+		}
+	]
+}

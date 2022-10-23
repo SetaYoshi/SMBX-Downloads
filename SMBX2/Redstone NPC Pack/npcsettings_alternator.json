@@ -1,0 +1,24 @@
+{
+	"style" : "groupbox",
+	"title" : "Alternator Properties",
+	"layout": [
+			{
+			"control": "comboBox",
+			"name": "type",
+			"title": "Type",
+			"type": "int",
+			"tooltip": "Which subvariation should it use? Check the behavior section in the NPC's tooltip for more info.",
+			"value-default": 0,
+			"elements": ["Alternator", "Inverter"]
+		},
+		{
+			"control": "comboBox",
+			"name": "dir",
+			"title": "Orientation",
+			"type": "int",
+			"tooltip": "the orientation of the NPC. This will change the direction of inputs and outputs.",
+			"value-default": 0,
+			"elements": ["Horizontal", "Vertical"]
+		}
+	]
+}

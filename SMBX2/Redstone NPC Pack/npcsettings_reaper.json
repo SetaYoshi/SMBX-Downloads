@@ -1,0 +1,22 @@
+{
+	"style" : "groupbox",
+	"title" : "Reaper Block Properties",
+	"layout": [
+		{
+			"control": "comboBox",
+			"name": "dir",
+			"title": "Direction",
+			"type": "int",
+			"tooltip": "What direction should it face?",
+			"value-default": 0,
+			"elements": ["Left", "Up", "Right", "Down"]
+		},
+		{
+			"control": "lineEdit",
+			"name": "whitelist",
+			"title": "White List",
+			"tooltip": "The reaper will only scan for NPCs with matching ID. You can multiple IDs by seperating them by commas, ex <i>1, 2, 3</i><br>If left blank, only NPCs defined in the redconfig will be scanned.",
+			"value-default": ""
+		}
+	]
+}

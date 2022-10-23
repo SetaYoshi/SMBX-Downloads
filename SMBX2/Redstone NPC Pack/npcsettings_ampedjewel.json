@@ -1,0 +1,13 @@
+{
+	"style" : "groupbox",
+	"title" : "Amped Jewel Properties",
+	"layout": [
+		{
+			"control": "lineEdit",
+			"name": "tagstext",
+			"title": "Pins",
+			"tooltip": "Two amped jewels will only form a wall of electricity if they share a pin. You can add as many pins as you want by seperating them by commas ex <i>pinName1, pinName2, pinName3</i>",
+			"value-default": "default"
+		}	
+	]
+}

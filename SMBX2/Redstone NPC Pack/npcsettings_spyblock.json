@@ -1,0 +1,31 @@
+{
+	"style" : "groupbox",
+	"title" : "Spy Block Properties",
+	"layout": [
+		{
+			"control": "comboBox",
+			"name": "type",
+			"title": "Type",
+			"type": "int",
+			"tooltip": "Which subvariation should it use? Check the behavior section in the NPC's tooltip for more info.",
+			"value-default": 0,
+			"elements": ["Players", "NPCs", "Blocks"]
+		},
+		{
+			"control": "comboBox",
+			"name": "dir",
+			"title": "Direction",
+			"type": "int",
+			"tooltip": "What direction should it face?",
+			"value-default": 0,
+			"elements": ["Left", "Up", "Right", "Down"]
+		},
+		{
+			"control": "lineEdit",
+			"name": "whitelist",
+			"title": "White List",
+			"tooltip": "The spyblock will only scan for objects with matching ID. You can multiple IDs by seperating them by commas, ex <i>1, 2, 3</i><br>If left blank, then all objects IDs will be scanned. Note, for player spyblocks, it will filter characters instead of IDs.",
+			"value-default": ""
+		}
+	]
+}

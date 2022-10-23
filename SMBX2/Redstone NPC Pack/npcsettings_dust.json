@@ -1,0 +1,26 @@
+{
+	"style" : "groupbox",
+	"title" : "Dust Properties",
+	"layout": [
+		{
+			"control": "comboBox",
+			"name": "color",
+			"title": "Color",
+			"type": "int",
+			"tooltip": "What color should the dust be? Different colors do not interact each other.",
+			"value-default": 0,
+			"elements": ["Red", "Orange", "Purple", "Pink"]
+		},
+        {
+			"control": "spinBox",
+			"type": "int",
+			"name": "mapX",
+			"title": "Map",
+			"tooltip": "What version of graphic should be displayed? Set to 0 to automatically 'map' the gfx. Set to -1 to make it invisible.<br>Note that the graphic does not affect in what direction the dust outputs its power.",
+			"value-default": 0,
+			"value-min": -1,
+			"value-max": 99,
+			"single-step": 1
+		}
+	]
+}
