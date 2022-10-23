@@ -1,0 +1,30 @@
+{
+	"style" : "groupbox",
+	"title" : "Lever Properties",
+	"layout": [
+			{
+			"control": "lineEdit",
+			"name": "layername",
+			"title": "Layer",
+			"tooltip": "The layer that should be toggled",
+			"value-default": ""
+		},		
+		{
+			"control": "checkbox",
+			"name": "smoke",
+			"title": "No Smoke?",
+			"tooltip": "If checked, the smoke effect will be disabled",
+			"text-visible": false,
+			"value-default": false
+		},	
+		{
+			"control": "comboBox",
+			"name": "state",
+			"title": "State",
+			"type": "int",
+			"tooltip": "Should it be on?",
+			"value-default": 0,
+			"elements": ["Off", "On"]
+		}
+	]
+}

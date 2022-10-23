@@ -1,0 +1,53 @@
+{
+	"style" : "groupbox",
+	"title" : "Mini Necky Settings",
+	"layout": [	
+		{
+			"control": "comboBox",
+			"name": "variant",
+			"title": "Variant",
+			"type": "int",
+			"tooltip": "What is the variant?",
+			"value-default": 0,
+			"elements": ["Stationary", "Top - Bottom", "Top - Bottom - Almost Bottom"]
+		},
+		{
+			"control" : "group",
+			"title" : "",
+			"name" : "..",
+			"children": [
+			{
+				"control": "checkbox",
+				"name": "override",
+				"title": "Use Per-NPC Settings",
+				"tooltip": "When checked, per-NPC settings will be used for these settings in place of NPC config values.",
+				"text-visible": false,
+				"value-default": false
+			},		
+			{
+				"control": "spinBox",
+				"type": "int",
+				"name": "delaycycle",
+				"title": "Throw Delay",
+				"tooltip": "Only for Mini-Neckys that have the stationary variant. The number of animation cycles inbetween shots",
+				"value-default": 3,
+				"value-min": 1,
+				"value-max": 99,
+				"single-step": 1
+			},
+		    {
+				"control": "spinBox",
+				"type": "int",
+				"name": "amplitude",
+				"title": "Amplitude",
+				"tooltip": "Determines the total lenght of movement.",
+				"value-default": 96,
+				"value-min": 1,
+				"value-max": 500,
+				"single-step": 1
+			}
+			]
+		}
+			
+	]
+}

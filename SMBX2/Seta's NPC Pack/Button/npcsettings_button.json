@@ -1,0 +1,21 @@
+{
+	"style" : "groupbox",
+	"title" : "SpyBlock Settings",
+	"layout": [
+		{
+			"control": "lineEdit",
+			"name": "eventname",
+			"title": "Event",
+			"tooltip": "The event that should be triggered",
+			"value-default": ""
+		},
+		{
+			"control": "checkbox",
+			"name": "broken",
+			"title": "Only work once?",
+			"tooltip": "If checked, the button will break after one use",
+			"text-visible": false,
+			"value-default": false
+		}
+	]
+}

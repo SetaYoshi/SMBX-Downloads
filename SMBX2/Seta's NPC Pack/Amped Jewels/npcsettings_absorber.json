@@ -1,0 +1,15 @@
+{
+	"style" : "groupbox",
+	"title" : "Absorber Settings",
+	"layout": [	
+		{
+			"control": "comboBox",
+			"name": "color",
+			"title": "Color",
+			"type": "int",
+			"tooltip": "What should the color output of the light be?",
+			"value-default": 0,
+			"elements": ["White", "Red", "Orange", "Yellow", "Green", "Blue", "Purple"]
+		}
+	]
+}

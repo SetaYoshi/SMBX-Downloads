@@ -1,0 +1,37 @@
+{
+	"style" : "groupbox",
+	"title" : "Necky's Settings",
+	"layout": [
+		{
+			"control": "comboBox",
+			"name": "variant",
+			"title": "Variant",
+			"type": "int",
+			"tooltip": "What is the variant?",
+			"value-default": 0,
+			"elements": ["Foward", "Top", "Spray"]
+		},
+	    {
+			"control": "spinBox",
+			"type": "int",
+			"name": "yforce",
+			"title": "Initial Throw Force",
+			"tooltip": "Only if it moves periodically. Determines the total lenght of movement.",
+			"value-default": 10,
+			"value-min": 0,
+			"value-max": 99,
+			"single-step": 0.1
+		},
+	    {
+			"control": "spinBox",
+			"type": "int",
+			"name": "cooldown",
+			"title": "Throw Cooldown",
+			"tooltip": "Only if it moves periodically. Determines the amount of cycles per second",
+			"value-default": 60,
+			"value-min": 10,
+			"value-max": 999,
+			"single-step": 1
+		}
+	]
+}

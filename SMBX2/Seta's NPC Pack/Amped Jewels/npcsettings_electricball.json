@@ -1,0 +1,24 @@
+{
+	"style" : "groupbox",
+	"title" : "Electric Ball Settings",
+	"layout": [
+		{
+			"control": "lineEdit",
+			"name": "destname",
+			"title": "Destination",
+			"tooltip": "The name of the destination",
+			"value-default": ""
+		},	
+	    {
+			"control": "spinBox",
+			"type": "double",
+			"name": "speed",
+			"title": "Speed",
+			"tooltip": "The speed of the ball in pixels/frame",
+			"value-default": 2,
+			"value-min": 0.1,
+			"value-max": 99,
+			"single-step": 0.1
+		}		
+	]
+}

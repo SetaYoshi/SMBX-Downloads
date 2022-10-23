@@ -1,0 +1,29 @@
+{
+	"style" : "groupbox",
+	"title" : "SpyBlock Settings",
+	"layout": [
+		{
+			"control": "lineEdit",
+			"name": "eventname",
+			"title": "Event",
+			"tooltip": "The event that should be triggered",
+			"value-default": ""
+		},
+		{
+			"control": "checkbox",
+			"name": "scanplayer",
+			"title": "Spy on players?",
+			"tooltip": "If checked, the spyblock will also activate when detecting players.",
+			"text-visible": false,
+			"value-default": false
+		},
+		{
+			"control": "checkbox",
+			"name": "scannpc",
+			"title": "Spy on NPCs?",
+			"tooltip": "If checked, the spyblock will also activate when detecting NPCs. Use the container field to declare a filter.",
+			"text-visible": false,
+			"value-default": true
+		}
+	]
+}

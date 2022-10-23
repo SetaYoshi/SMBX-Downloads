@@ -1,0 +1,35 @@
+{
+	"style" : "groupbox",
+	"title" : "Amped Jewel Properties",
+	"layout": [
+		{
+			"control": "lineEdit",
+			"name": "tagstext",
+			"title": "Tags",
+			"tooltip": "If you set a tag, only amped jewels that share a tag can connect. Set this to blank to prevent any type of connnections",
+			"value-default": "default"
+		},
+		{
+			"control": "spinBox",
+			"type": "int",
+			"name": "ontime",
+			"title": "On Time",
+			"tooltip": "Tha amount of frames the amped jewel should stay on",
+			"value-default": 200,
+			"value-min": 1,
+			"value-max": 1000,
+			"single-step": 1
+		},
+		{
+			"control": "spinBox",
+			"type": "int",
+			"name": "offtime",
+			"title": "Off Time",
+			"tooltip": "Tha amount of frames the amped jewel should stay off. Set to 0 to make the amped jewel always stay on",
+			"value-default": 200,
+			"value-min": 0,
+			"value-max": 1000,
+			"single-step": 1
+		}
+	]
+}

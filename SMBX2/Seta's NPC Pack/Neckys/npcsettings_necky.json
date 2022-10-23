@@ -1,0 +1,49 @@
+{
+	"style" : "groupbox",
+	"title" : "Necky's Settings",
+	"layout": [
+		{
+			"control": "checkbox",
+			"name": "hormove",
+			"title": "Move Horizontally?",
+			"tooltip": "If checked, the Necky will move from left to right",
+			"value-default": ""
+		},
+		{
+			"control": "checkbox",
+			"name": "vermove",
+			"title": "Move Vertically?",
+			"tooltip": "If checked, the Necky will move from top to bottom",
+			"value-default": ""
+		},
+		{
+			"control": "checkbox",
+			"name": "period",
+			"title": "Move Periodically?",
+			"tooltip": "If checked, the Necky will move back and forth",
+			"value-default": ""
+		},		
+	    {
+			"control": "spinBox",
+			"type": "int",
+			"name": "amplitude",
+			"title": "Amplitude",
+			"tooltip": "Only if it moves periodically. Determines the total lenght of movement.",
+			"value-default": 128,
+			"value-min": 8,
+			"value-max": 500,
+			"single-step": 1
+		},
+	    {
+			"control": "spinBox",
+			"type": "double",
+			"name": "w",
+			"title": "Frequency",
+			"tooltip": "Only if it moves periodically. Determines the amount of movement cycles per second",
+			"value-default": 0.25,
+			"value-min": 0.01,
+			"value-max": 5,
+			"single-step": 0.01
+		}
+	]
+}

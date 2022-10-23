@@ -1,0 +1,28 @@
+{
+	"style" : "groupbox",
+	"title" : "Handy Torch Settings",
+	"layout": [
+		{
+			"control": "lineEdit",
+			"name": "on",
+			"title": "On Event",
+			"tooltip": "The event that should be triggered when the torch is turned on",
+			"value-default": ""
+		},
+		{
+			"control": "lineEdit",
+			"name": "off",
+			"title": "Off Event",
+			"tooltip": "The event that should be triggered when the torch is turned off",
+			"value-default": ""
+		},
+		{
+			"control": "checkbox",
+			"name": "active",
+			"title": "Active",
+			"tooltip": "If checked, the torch will begin activated",
+			"text-visible": false,
+			"value-default": false
+		}
+	]
+}

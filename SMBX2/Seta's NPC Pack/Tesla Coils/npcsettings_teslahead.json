@@ -1,0 +1,61 @@
+{
+	"style" : "groupbox",
+	"title" : "Tesla Head Settings",
+	"layout": [
+		{
+			"control": "lineEdit",
+			"name": "name",
+			"title": "Name",
+			"tooltip": "Name of the Tesla Head",
+			"value-default": ""
+		},
+		{
+			"control": "lineEdit",
+			"name": "dest",
+			"title": "Destination",
+			"tooltip": "The name of the destination for the electric ball",
+			"value-default": ""
+		},	
+	    {
+			"control": "spinBox",
+			"type": "int",
+			"name": "onTime",
+			"title": "On Time",
+			"tooltip": "Amount of frames the head stays on.",
+			"value-default": 100,
+			"value-min": 0,
+			"value-max": 9999,
+			"single-step": 1
+		},
+	    {
+			"control": "spinBox",
+			"type": "int",
+			"name": "offTime",
+			"title": "Off Time",
+			"tooltip": "Amount of frames the head stays off. If this is 0, it will never automatically power on. Only useful for starting chains",
+			"value-default": 0,
+			"value-min": 0,
+			"value-max": 9999,
+			"single-step": 1
+		},		
+	    {
+			"control": "spinBox",
+			"type": "double",
+			"name": "elecSpeed",
+			"title": "Electric Ball Speed",
+			"tooltip": "The speed of the output electric ball",
+			"value-default": 2,
+			"value-min": 0.1,
+			"value-max": 99,
+			"single-step": 0.1
+		},
+		{
+			"control": "checkbox",
+			"name": "electric",
+			"title": "Begin On?",
+			"tooltip": "If checked, the tesla head begins activated.",
+			"text-visible": false,
+			"value-default": false
+		}		
+	]
+}

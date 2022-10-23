@@ -1,0 +1,5 @@
+[1]
+frames=1
+framestyle=0
+gravity=0.2
+priority=-60.2

@@ -1,0 +1,36 @@
+{
+	"style" : "groupbox",
+	"title" : "Tesla Head Settings",
+	"layout": [
+	    {
+			"control": "spinBox",
+			"type": "int",
+			"name": "offTime",
+			"title": "Off Time",
+			"tooltip": "Amount of frames the head stays off.",
+			"value-default": 100,
+			"value-min": 0,
+			"value-max": 9999,
+			"single-step": 1
+		},
+	    {
+			"control": "spinBox",
+			"type": "int",
+			"name": "onTime",
+			"title": "On Time",
+			"tooltip": "Amount of frames the head stays on.",
+			"value-default": 100,
+			"value-min": 0,
+			"value-max": 9999,
+			"single-step": 1
+		},
+		{
+			"control": "checkbox",
+			"name": "electric",
+			"title": "Begin On?",
+			"tooltip": "If checked, the tesla head begins activated.",
+			"text-visible": false,
+			"value-default": false
+		}		
+	]
+}

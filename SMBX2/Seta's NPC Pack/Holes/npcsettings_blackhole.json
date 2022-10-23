@@ -1,0 +1,63 @@
+{
+	"style" : "groupbox",
+	"title" : "Black Hole Settings",
+	"layout": [
+		{
+			"control": "lineEdit",
+			"name": "name",
+			"title": "Name",
+			"tooltip": "The name of the worm hole. Used to select the destination of a wormhole.",
+			"value-default": ""
+		},
+		{
+			"control": "lineEdit",
+			"name": "dest",
+			"title": "Destination",
+			"tooltip": "The destination of the warp. If multiple wormhole with the same name are found, the warp will take you to the closes worm hole. If no destination is placed, it will take you to the nearest black hole regardless of the name",
+			"value-default": ""
+		},
+		{
+			"control": "checkbox",
+			"name": "deadly",
+			"title": "Deadly Mode",
+			"tooltip": "If checked, the black hole will destroy instead of teleporting",
+			"text-visible": false,
+			"value-default": true
+		},		
+	    {
+			"control": "spinBox",
+			"type": "double",
+			"name": "pushforce",
+			"title": "Push Force",
+			"tooltip": "The amount of push and pull the hole does. Set to 0 to disable",
+			"value-default": -1,
+			"value-min": -99,
+			"value-max": 99,
+			"single-step": 0.01
+		},			
+		{
+			"control": "checkbox",
+			"name": "scanPlayer",
+			"title": "Allow Players",
+			"tooltip": "If checked, the black hole will scan for players to be warped",
+			"text-visible": false,
+			"value-default": true
+		},			
+		{
+			"control": "checkbox",
+			"name": "scanNPC",
+			"title": "Allow NPCs",
+			"tooltip": "If checked, the black hole will scan for NPCs to be warped",
+			"text-visible": false,
+			"value-default": true
+		},		
+		{
+			"control": "checkbox",
+			"name": "scanBlock",
+			"title": "Allow Blocks",
+			"tooltip": "If checked, the black hole will scan for blocks to be warped",
+			"text-visible": false,
+			"value-default": false
+		}				
+	]
+}
