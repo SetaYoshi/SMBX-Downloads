@@ -1,7 +1,7 @@
 # Set the default behavior, in case people don't have core.autocrlf set.
-* text=binary
+* text=auto
 
 # Declare files that will always have CRLF line endings on checkout.
-*.lvl binary
-*.lvlx binary
+*.lvl text eol=crlf
+*.lvlx text eol=crlf
 
