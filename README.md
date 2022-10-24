@@ -8,7 +8,6 @@ If you want to download something as a zip, you can use [this online tool](https
 ### Scripts
 
 [Seta's NPC Pack (ALL)](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack)
-
 - [Amped Jewels](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FAmped%2520Jewels)
 - [Balloons](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FBalloons)
 - [Binoculars](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FBinoculars)
