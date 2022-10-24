@@ -1,0 +1,9 @@
+gfxoffsety=0
+width=42
+height=42
+npcblock=0
+nohurt=1
+speed=0
+noblockcollision=1
+nogravity=1
+frames=1

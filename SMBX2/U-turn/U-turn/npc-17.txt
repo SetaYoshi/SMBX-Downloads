@@ -1,0 +1,4 @@
+width=42
+height=26
+score=0
+noblockcollision=0

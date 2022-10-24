@@ -1,0 +1,11 @@
+width=42
+height=42
+playerblocktop=0
+npcblock=0
+npcblocktop=0
+grabtop=0
+nohurt=1
+speed=0
+noblockcollision=1
+nogravity=1
+frames=1

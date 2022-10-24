@@ -1,0 +1,7 @@
+gfxoffsety=0
+foreground=1
+width=36
+score=0
+npcblock=0
+cliffturn=1
+framespeed=16

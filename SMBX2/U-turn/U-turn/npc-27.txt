@@ -1,0 +1,13 @@
+width=36
+height=36
+score=0
+jumphurt=1
+speed=2.5
+noyoshi=0
+nofireball=0
+nogravity=1
+noiceball=0
+frames=3
+framespeed=11
+nohammer=0
+noshell=0

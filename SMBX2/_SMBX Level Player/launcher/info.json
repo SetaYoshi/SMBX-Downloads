@@ -1,0 +1,9 @@
+{
+	"mainPage": "index.html",
+	"current-version": [1, 0, 0],
+	"allowTwoPlayer": true,
+	"allowSaveSelection" : false,
+	"allowPlayerSelection" : true,	
+	"credits": "SetaYoshi",
+	"episodeIcon": "icon.apng"
+}

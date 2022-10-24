@@ -1,0 +1,9 @@
+width=42
+height=42
+score=0
+npcblock=0
+jumphurt=1
+noblockcollision=0
+nogravity=0
+frames=2
+framespeed=16

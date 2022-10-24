@@ -1,0 +1,4 @@
+width=42
+height=42
+score=0
+frames=3

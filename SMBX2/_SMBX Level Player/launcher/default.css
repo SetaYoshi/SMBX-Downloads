@@ -1,0 +1,5 @@
+body {
+	background-image:  url('logo-1.png'), url('logo-2.png'), url('mountains.png'), url('tile.png');
+	background-repeat: no-repeat, no-repeat, repeat-x, repeat;
+	background-position: 50% -60%, 51% -800%, 0% -100%, top left;
+}

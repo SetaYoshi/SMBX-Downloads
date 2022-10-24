@@ -1,0 +1,23 @@
+EPISODE/SCRIPTS: SetaYoshi/Yoshi021
+LOGO: Lx Xzit/Dark Mecha
+BETA TESTERS: Chipss, Eclipsed, ICE_E_U, MechDragon777
+CSFX: From Mario Maker
+MISC:
+  - FILTERS: Hoeloe
+  - REPL: The0x539
+  - SPEEDRUN TIMER: Eclipsed, MechDragon777, PixelPest, The0x539
+SPECIAL THANKS TO: Hoeloe and Rednaxela
+
+MUSIC:
+  - 1: Super Mario Galaxy - Space Junk Galaxy
+  - 2: The Sims 2 - Seasons Neighborhood Theme
+  - 3: Super Mario 64 - Jolly Roger Bay
+  - 4: Mario & Rabbids Kingdom Battle
+  - 5: Fez - Majesty
+  - 6: Super Mario Odessey - Lake Lemonade
+  - 7: Fez - Love
+  - 8: Animal Crossing New Leaf - Outdoors at 7 p.m.
+  - 9: Pokémon Diamond, Pokémon Pearl - Route 209
+  - 10: Wii Fit Plus - Yoga
+  - 11: Donkey Kong Country 2 Diddy's Kong Quest, Super Smash Bros. Ultimate - Stickerbush Symphony
+  - 12: Dancing Line - The Storm (Blues Remix)

@@ -1,0 +1,8 @@
+width=84
+height=42
+playerblock=0
+playerblocktop=0
+npcblock=0
+npcblocktop=0
+jumphurt=1
+nogravity=1

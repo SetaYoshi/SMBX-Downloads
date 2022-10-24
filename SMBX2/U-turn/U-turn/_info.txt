@@ -1,0 +1,15 @@
+The lua in the level automatically set the character and powerup. Just in case, make sure to play the level as Super Mario with no mounts (mario-2). 
+Use the "drop-item" key to open a menu. 
+
+
+Game based on: U-Turn http://www.frivplus.com/games/pico8/uturn.html?ref=fmp1
+Some mechanics were changed from the original game [obviously :)].
+
+
+Level and lua made by level author. 
+
+Graphics ripped by level author.
+Some graphics were customed made and were made by FlatKiwi. 
+
+Music by Nitrome. Music from the game Hot Air 2.
+https://youtu.be/ipVXMseZ2m8

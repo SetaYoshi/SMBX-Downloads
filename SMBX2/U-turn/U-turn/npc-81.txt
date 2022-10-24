@@ -1,0 +1,5 @@
+width=42
+height=42
+speed=0
+noblockcollision=1
+nogravity=1
