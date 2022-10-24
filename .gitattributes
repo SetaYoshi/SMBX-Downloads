@@ -2,6 +2,6 @@
 * text=binary
 
 # Declare files that will always have CRLF line endings on checkout.
-*.lvl text eol=crlf
-*.lvlx text eol=crlf
+*.lvl binary
+*.lvlx binary
 
