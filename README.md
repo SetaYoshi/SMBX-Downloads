@@ -8,22 +8,22 @@ If you want to download something as a zip, you can use [this online tool](https
 ### Scripts
 
 [Seta's NPC Pack (ALL)](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack)
-- [Amped Jewels](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FAmped%2520Jewels)
-- [Balloons](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FBalloons)
-- [Binoculars](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FBinoculars)
-- [BoomShell Koopa](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FBoomShell%2520Koopa)
-- [Button](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FButton)
-- [Handy Torch](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FHandy%2520Torch)
-- [Holes](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FHoles)
-- [Lectern](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FLectern)
-- [Lever](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FLever)
-- [Neckys](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FNeckys)
-- [Read Me Sign](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FRead%2520Me%2520Sign)
-- [SpyBlocks](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FSpyBlocks)
-- [Tesla Coils](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FTesla%2520Coils)
-- [WarpHUBs](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FWarpHUBs)
+- [Amped Jewels v1.1](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FAmped%2520Jewels)
+- [Balloons v1.0](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FBalloons)
+- [Binoculars v1.0](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FBinoculars)
+- [BoomShell Koopa v1.0](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FBoomShell%2520Koopa)
+- [Button v1.0](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FButton)
+- [Handy Torch v1.1](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FHandy%2520Torch)
+- [Holes v1.7](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FHoles)
+- [Lectern v1.1](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FLectern)
+- [Lever v1.0](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FLever)
+- [Neckys v1.2](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FNeckys)
+- [Read Me Sign v1.1](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FRead%2520Me%2520Sign)
+- [SpyBlocks v1.0](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FSpyBlocks)
+- [Tesla Coils v1.1](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FTesla%2520Coils)
+- [WarpHUBs v1.1](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FSeta%27s%2520NPC%2520Pack%2FWarpHUBs)
 
-[Redstone Pack](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FRedstone%2520NPC%2520Pack)  
+[Redstone Pack v1.3](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FRedstone%2520NPC%2520Pack)  
 To download a specific NPC, go [here](https://github.com/SetaYoshi/SMBX-Downloads/tree/main/SMBX2/Redstone%20NPC%20Pack) and [download the folder](https://download-directory.github.io/) of the NPC you want.
 
 
@@ -43,10 +43,10 @@ To download a specific NPC, go [here](https://github.com/SetaYoshi/SMBX-Download
 
 ### Scripts
 
-[Parrallaxx](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX38A%2FParrallaxx)  
-[Custom Cheats](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX38A%2FCustom%2520Cheats)  
-[Custom Credits](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX38A%2FCustom%2520Credits)  
-[Faded Blocks](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX38A%2FFaded%2520Blocks)  
+[Parrallaxx v1.4](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX38A%2FParrallaxx)  
+[Custom Cheats v1.0](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX38A%2FCustom%2520Cheats)  
+[Custom Credits v1.0](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX38A%2FCustom%2520Credits)  
+[Faded Blocks v1.0](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX38A%2FFaded%2520Blocks)  
 
 ### Levels
 
