@@ -1,9 +1,32 @@
 local RS = {}
 
 --  ===============================
---  ====   Redstone.lua v1.2   ====
+--  ====   Redstone.lua v1.3   ====
 --  ====     By  SetaYoshi     ====
 --  ===============================
+
+expandedDefines = require("expandedDefines")
+
+min, max, abs, clamp = math.min, math.max, math.abs, math.clamp
+insert, map, unmap, append = table.insert, table.map, table.unmap, table.append
+gmatch, find, sub = string.gmatch, string.find, string.sub
+
+-- local blockConfigCache = {}
+-- function configCacheBlock(id)
+--   if not blockConfigCache[id] then
+--     blockConfigCache[id] = Block.config[id]
+--   end
+--
+--   return blockConfigCache[id]
+-- end
+
+function string.startswith(str, start)
+  return str:sub(1, #start) == start
+end
+
+function string.endswith(str, ending)
+	return ending == "" or str:sub(-#ending) == ending
+end
 
 --[[
         :::::::::   ::::::::::  :::::::::    ::::::::  :::::::::::  ::::::::   ::::    :::  ::::::::::
@@ -66,76 +89,117 @@ local split = string.split
 
 
 -- Defines redstone event order
-RS.componentList = {
-  "chip",           --DONE
-  "chest",          --DONE
-  "hopper",         --DONE
-  "redblock",       --DONE
-  "button",         --DONE
-  "lever",          --DONE
-  "block",          --DONE
-  "torch",          --DONE
-  "reflector",      --DONE
-  "beamsource",     --DONE
-  "absorber",       --DONE
-  "alternator",     --DONE
-  "repeater",       --DONE
-  "capacitor",      --DONE
-  "transmitter",    --DONE
-  "reciever",       --DONE
-  "operator",       --DONE
-  "reaper",         --DONE
-  "spyblock",       --DONE
-  "soundblock",     --DONE
-  "noteblock",      --DONE
-  "note",           --DONE
-  "broadcaster",    --DONE
-  "dropper",        --DONE
-  "flamethrower",   --DONE
-  "flame",          --DONE
-  "sickblock",      --DONE
-  "deadsickblock",  --DONE
-  "tnt",            --DONE
-  "jewel",          --DONE
-  "lectern",        --DONE
-  "reddoor",        --DONE
-  "piston",         -- pistons will be done in a later update
-  "piston_ehor",
-  "piston_ever",
-  "dust",           --DONE
-  "commandblock",   --DONE
-  "observer"        --DONE
-}
+-- RS.componentList = {
+--   "chip",           --DONE 0.10
+--   "broadcaster",    --DONE 0.12
+--   "chest",          --DONE 0.14
+--   "hopper",         --DONE 0.16
+--   "redblock",       --DONE 0.18
+--   "button",         --DONE 0.20
+--   "lever",          --DONE 0.22
+--   "block",          --DONE 0.24
+--   "torch",          --DONE 0.26
+--   "reflector",      --DONE 0.28
+--   "beamsource",     --DONE 0.30
+--   "absorber",       --DONE 0.32
+--   "alternator",     --DONE 0.34
+--   "repeater",       --DONE 0.36
+--   "capacitor",      --DONE 0.38
+--   "transmitter",    --DONE 0.40
+--   "reciever",       --DONE 0.42
+--   "operator",       --DONE 0.44
+--   "reaper",         --DONE 0.46
+--   "spyblock",       --DONE 0.48
+--   "soundblock",     --DONE 0.52
+--   "noteblock",      --DONE 0.54
+--   "note",           --DONE 0.56
+--   "dropper",        --DONE 0.58
+--   "flamethrower",   --DONE 0.60
+--   "flame",          --DONE 0.62
+--   "sickblock",      --DONE 0.64
+--   "deadsickblock",  --DONE 0.6401
+--   "tnt",            --DONE 0.66
+--   "jewel",          --DONE 0.68
+--   "lectern",        --DONE 0.70
+--   "reddoor",        --DONE 0.72
+--   "piston",         --0.74
+--   "piston_ehor",    --0.7401
+--   "piston_ever",    --0.7401
+--   "dust",           --DONE --0.76
+--   "commandblock",   --DONE --0.78
+--   "observer"        --DONE -- 1
+-- }
 
--- AI, a file meant to be edited by the level author
-RS.redConfig = require("redstone_config")
-local redConfig = RS.redConfig
+-- Set this to false and the script will no longer stop NPCs from despawning. This will reduce lag in your level! I reccomend you set this to false and install spawnzones into your level
+RS.disabledespawn = false
+
+RS.componentList = {}
+RS.component = {}
 
 -- Function to register a component
-RS.component = {}
 function RS.register(module)
+  module.name = module.name or "noname_"..RNG.randomInt(1000, 9999)
+  module.order = module.order or 0.5
+  module.config = module.config or NPC.config[module.id]
+  module.test = function(x) return (x == module.id or x == module.name)  end
+
   RS.component[module.name] = module
+  table.insert(RS.componentList, module)
 end
 
-RS.npcAI = {}
-RS.npcList = {}
---[[
-  Function to register NPC AI
-  @registerNPC(NPCID, AI)
-  NPCID: The ID to apply the AI
-  AI:    An AI table. Must be built as the following:
-    npcAI = {
-       onRedPower = function()
-       onRedInventory = function()
-       onRedTick = function()
-       onDispense = function()
-    }
-    any function is optional.
-]]
-function RS.registerNPC(ID, npcAI)
-  insert(RS.npcList, ID)
-  RS.npcAI[ID] = npcAI
+
+RS.is = {}
+local is_mt = {}
+is_mt.__index = function(t, k)
+  local com = RS.component[k]
+  if com then
+    return com.test
+  else
+    return function() return false end
+  end
 end
+
+is_mt.__call = function(t, x, ...)
+  local inp = {...}
+  local out = {}
+
+  for k, v in ipairs(inp) do
+    local is = RS.is[v](x)
+    if is then
+      return true
+    end
+  end
+
+  return false
+end
+
+
+RS.id = {}
+local id_mt = {}
+id_mt.__index = function(t, k)
+  local com = RS.component[k]
+  if com then
+    return com.id
+  end
+end
+
+id_mt.__call = function(t, ...)
+  local inp = {...}
+  local out = {}
+
+  for k, v in ipairs(inp) do
+    local id = RS.id[v]
+    if id then
+      table.insert(out, id)
+    end
+  end
+
+  return out
+end
+
+setmetatable(RS.is, is_mt)
+setmetatable(RS.id, id_mt)
+
 
 
 --[[
@@ -180,7 +244,7 @@ RS.energyFilter = function(n, c, p, d, hitbox)
   if n == c then return end
   n.data.power = n.data.power or 0
 
-  local component = RS.comList[n.id] or RS.npcAI[n.id]
+  local component = RS.comList[n.id]
   if component and component.onRedPower then
     return component.onRedPower(n, c, p, d, hitbox)
   else
@@ -262,7 +326,7 @@ RS.passInventory = function(args)
   local list = Colliders.getColliding{a = c, b = args.npcList, btype = Colliders.NPC, filter = RS.nofilter}
   for _, n in ipairs(list) do
     if Colliders.collide(c, n) and n.data.invspace then
-      local com = RS.comList[n.id] or RS.npcAI[n.id]
+      local com = RS.comList[n.id]
       if com.onRedInventory then
         return not com.onRedInventory(n, args.source, args.inventory, c.direction, c)
       else
@@ -427,7 +491,7 @@ end
 RS.spawnEffect = function(id, obj)
   if type(obj) == "NPC" and NPC.config[id].invisible then return end
   local e = Effect.spawn(id, obj.x + 0.5*obj.width, obj.y + 0.5*obj.height)
-  e.x, e.y = e.x - e.width, e.y - e.height
+  e.x, e.y = e.x - e.width*0.5, e.y - e.height*0.5
 end
 
 --[[
@@ -465,6 +529,7 @@ RS.parseNumList = function(str)
   end
   return t
 end
+
 
 RS.setLayerLineguideSpeed = function(n)
   if not (n.data._basegame.lineguide and n.data._basegame.lineguide.state == 1) then
@@ -586,7 +651,7 @@ RS.luaParse = function(name, n, msg, recurse)
 
 	local str = msg
 	local chunk, err = load(str, str, "t", proxytbl)
-  
+
 	if chunk then
 		local func = chunk()
 		funcCache[msg] = func
@@ -632,7 +697,7 @@ local function validCheck(v)
 end
 
 -- List of important per-NPC variables
-local function primechecker(n)
+local function primechecker(n, com)
   local data = n.data
   data.prime = true
 
@@ -653,6 +718,10 @@ local function primechecker(n)
 
   -- If true, the inventory slot can be filled
   data.invspace = data.invspace or false
+
+  if com.prime then
+    com.prime(n)
+  end
 end
 
 
@@ -671,8 +740,7 @@ local function forceStart()
     if sort[i] then
       for _, n in ipairs(sort[i]) do
         if not n.data.prime then
-          primechecker(n)
-          RS.comList[n.id].prime(n)
+          primechecker(n, RS.comList[n.id])
         end
       end
     end
@@ -681,8 +749,7 @@ end
 
 local function tickLogic(com, n)
   if not n.data.prime then
-    primechecker(n)
-    com.prime(n)
+    primechecker(n, com)
   end
   -- Copied from spawnzones.lua by Enjl
   if RS.disabledespawn and not n.isHidden and not n.data.disabledespawn then
@@ -699,14 +766,13 @@ local function tickLogic(com, n)
 
   if com.config.grabfix then n:mem(0x134, FIELD_WORD, 0) end -- Custom grabfix (thx mrdoublea)
 
-  com.onRedTick(n)
+  if com.onRedTick then com.onRedTick(n) end
 end
 
 local function tickendLogic(n)
   local com = RS.comList[n.id]
   if not n.data.prime then
-    primechecker(n)
-    com.prime(n)
+    primechecker(n, com)
   end
 
   if com.onRedTickEnd then
@@ -723,8 +789,7 @@ local function drawLogic(n)
 
   if validCheck(n) then
     if not n.data.prime then
-      primechecker(n)
-      com.prime(n)
+      primechecker(n, com)
     end
 
     if com.onRedDraw then
@@ -735,21 +800,7 @@ local function drawLogic(n)
   end
 end
 
-local function npcTickLogic(n)
-  if n.data and validCheck(n) then
-    local dat = RS.npcAI[n.id]
-    if not n.data.prime then
-      primechecker(n)
-      if dat.prime then
-        dat.prime(n, n.data)
-      end
-    end
 
-    if dat.onRedTick then
-      dat.onRedTick(n, n.data)
-    end
-  end
-end
 
 -- Helper function
 -- Passes a function to all NPCs of all component types
@@ -762,7 +813,7 @@ end
   so because of this, I cannot use onTickNPC, Im sure if the system was built differently at its foundation it might be possible...
   but this wasnt made that way and Im not to sure how to change the approach at this point.
 
-  So, all NPC AI goes through this function, this is why the profiler takes you here. This is incharge of passing the AI in order
+  So, all NPC AI goes through this function, this is why the profiler takes you here. This is in charge of passing the AI in order
   Can there be improvememnts to this function? Maybe, but this is the best I got
 
   Also, dust is laggy, if you have a lot of it, try using the basicdust flag and see if that doesnt break your stuff (it probably wont break anything and it will save you from a LOT of lag)
@@ -801,24 +852,14 @@ local redstoneLogic_UNSORT = function(func)
 end
 
 function RS.onStart()
-  -- Load config functions
-  local config = redConfig.loadconfig(RS)
-  for k, v in pairs(config) do
-    RS[k] = v
-  end
 
-  redConfig.loadAI(RS)
-
+  RS.loadAI()
 
   -- Adds a check for each component. e.g. RS.isDust()
   RS.comID = {}
   RS.comOrder = {}
   RS.comList = {}
-  for k, v in ipairs(RS.componentList) do
-    local com = RS.component[v]
-    local testname, func = com.test()
-    RS[testname] = func
-
+  for k, com in ipairs(RS.componentList) do
     -- com.onTickNPC = tickLogic
     -- npcManager.registerEvent(com.id, com, "onTickNPC")
     -- com.onDrawNPC = drawLogic
@@ -829,6 +870,8 @@ function RS.onStart()
     insert(RS.comID, com.id)
     RS.comList[com.id] = com
     RS.comOrder[com.id] = k
+
+    if com.onRedLoad then com.onRedLoad() end
   end
 
   forceStart()
@@ -837,11 +880,6 @@ end
 function RS.onTick()
   -- component onTick
    redstoneLogic(tickLogic)
-
-  -- Basegame NPCs AI for broadcaster component
-  for k, v in ipairs(sectionList()) do
-    Colliders.getColliding{a = sectionCache(v), b = RS.npcList, btype = Colliders.NPC, filter = npcTickLogic}
-  end
 end
 
 
@@ -850,6 +888,7 @@ function RS.onTickEnd()
   redstoneLogic_UNSORT(tickendLogic)
 
   -- Observers need this special case to work properly!
+  if RS.id.observer then
   local onRedTickObserver = RS.component.observer.onRedTickObserver
   for k, v in ipairs(sectionList()) do
     local l = Colliders.getColliding{a = sectionCache(v), b = RS.component.observer.id, btype = Colliders.NPC, filter = validCheck}
@@ -858,11 +897,83 @@ function RS.onTickEnd()
     end
   end
 end
+end
 
 function RS.onDraw()
   -- component onDraw
   redstoneLogic_UNSORT(drawLogic)
 end
+
+
+
+local function split(str, delim)
+	local ret = {}
+	if not str then
+		return ret
+	end
+	if not delim or delim == '' then
+		for c in gmatch(str, '.') do
+			insert(ret, c)
+		end
+		return ret
+	end
+	local n = 1
+	while true do
+		local i, j = find(str, delim, n)
+		if not i then break end
+		insert(ret, sub(str, n, i - 1))
+		n = j + 1
+	end
+	insert(ret, sub(str, n))
+	return ret
+end
+
+local function getNameID(name)
+  local id = ''
+  for k, v in ipairs(split(name)) do
+    if k > 7 and k < #name - 3 then
+      if tonumber(v) then
+        id = id..v
+      else
+        break
+      end
+    end
+  end
+  return tonumber(id)
+end
+
+function RS.loadAI()
+local filepaths = {"", "../", "/RedstoneAI", "../RedstoneAI"}
+local requirepaths = {"", "", "RedstoneAI/", "RedstoneAI/"}
+
+  local redfiles = {}
+
+  for k, p in ipairs(filepaths) do
+    for _, v in ipairs(Misc.listLocalFiles(p)) do
+      if string.startswith(v, "rednpc-") and string.endswith(v, ".lua") then
+        insert(redfiles, {p, requirepaths[k], v})
+      end
+    end
+  end
+
+  local pNPC_ID = NPC_ID
+  for k, v in ipairs(redfiles) do
+    local path, name = v[2], v[3]
+    local id = getNameID(name)
+    if id then
+      _G.NPC_ID = id
+      local t = require(string.sub(path..name, 1, -5))
+      t.id = id
+      RS.register(t)
+    else
+      require(sub(path..name, 1, -5))
+    end
+  end
+  _G.NPC_ID = nil
+end
+
+
+
 
 
 function RS.onInitAPI()
