@@ -105,7 +105,7 @@ end
 local function scan(n, v, check)
   local data = n.data
 
-  if v and (#table.keys(data.whitelist) == 0 or data.whitelist[v[check]]) and not v.isHidden then
+  if v and (#table.unmap(data.whitelist) == 0 or data.whitelist[v[check]]) and not v.isHidden then
     data.isOn = true
     passPower(n, 15)
     return true

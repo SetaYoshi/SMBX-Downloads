@@ -91,7 +91,7 @@ function chip.onRedTick(n)
       redstone.energyFilter(npc, n, data.power, -1, npc)
     end
   else
-    local npc = Colliders.getColliding{a = n, b = NPC.ALL, atype = Colliders.NPC, btype = Colliders.NPC, filter = function(npc) return npc.isValid and not npc.isHidden and n ~= npc and (redstone.comList[npc.id] or redstone.npcAI[npc.id]) end}
+    local npc = Colliders.getColliding{a = n, b = NPC.ALL, atype = Colliders.NPC, btype = Colliders.NPC, filter = function(npc) return npc.isValid and not npc.isHidden and n ~= npc and redstone.comList[npc.id] end}
     if npc[1] then
       data.attached = true
       data.attachedNPC = npc[1]
