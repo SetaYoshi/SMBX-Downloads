@@ -137,7 +137,7 @@ local function instantpower(n)
           instantpower(v)
         end
       else
-          redstone.energyFilter(v, n, n.data.power, dir - 1, coll)
+          redstone.energyFilter(v, n, n.data.power, dir - 1, n.data.redhitbox[dir])
         end
       end
   end

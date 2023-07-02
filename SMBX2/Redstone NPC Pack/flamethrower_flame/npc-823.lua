@@ -6,7 +6,7 @@ local redstone = require("redstone")
 local npcManager = require("npcManager")
 
 local deg, atan2 = math.deg, math.atan2
-local append = table.append
+local append, unmap = table.append, table.unmap
 
 flame.name = "flame"
 flame.id = NPC_ID

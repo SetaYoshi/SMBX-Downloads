@@ -56,6 +56,7 @@ local interactionsList = {}
 transmitter.interactions = interactions
 
 function transmitter.registerInteraction(id, t)
+  if not id then return end
   t.filter = t.filter or function() return true end
 
   interactions[id] = t
