@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local fuse = {}
 
 local redstone = require("redstone")
@@ -60,7 +62,8 @@ fuse.config = npcManager.setNpcSettings({
   blocknpc = true,
   playerblock = true,
   playerblocktop = true,
-  npcblock = true
+  npcblock = true,
+  disabledespawn = false,
 })
 
 local sfxpop = Audio.SfxOpen(Misc.resolveFile("fuse-pop.ogg"))

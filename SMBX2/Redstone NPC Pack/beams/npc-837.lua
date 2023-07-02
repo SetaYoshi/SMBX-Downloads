@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local source = {}
 
 local redstone = require("redstone")
@@ -49,6 +51,7 @@ source.config = npcManager.setNpcSettings({
 	harmlessthrown = true,
   grabside = false,
 	ignorethrownnpcs = true,
+  disabledespawn = false,
 
   beamframes = 1,
   beamframespeed = 4,

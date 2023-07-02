@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local lever = {}
 
 local redstone = require("redstone")
@@ -38,7 +40,8 @@ lever.config = npcManager.setNpcSettings({
 	noyoshi = 1,
 	speed = 0,
   npcblock = true,
-	iswalker = true
+	iswalker = true,
+  disabledespawn = false,
 })
 npcManager.registerHarmTypes(lever.id, {HARM_TYPE_JUMP, HARM_TYPE_SPINJUMP}, {[HARM_TYPE_JUMP] = 10, [HARM_TYPE_SPINJUMP] = 10})
 

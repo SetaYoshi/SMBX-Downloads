@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local sickblock = {}
 
 local redstone = require("redstone")
@@ -50,6 +52,7 @@ sickblock.config = npcManager.setNpcSettings({
   playerblock = true,
   playerblocktop = true,
   npcblock = true,
+  disabledespawn = false,
 
 
   hasnosoul = false,

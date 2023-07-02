@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local reaper = {}
 
 local redstone = require("redstone")
@@ -44,6 +46,7 @@ reaper.config = npcManager.setNpcSettings({
   playerblock = true,
   playerblocktop = true,
   npcblock = true,
+  disabledespawn = false,
 
   soulspeed = 6,       -- The speed at which the souls travel at
   disablesoulanim = false,  -- Set to true to disable the soul effect animation
@@ -58,7 +61,7 @@ local ribbonlist = {}
 local function hasSoul(soulNPC, reaperNPC)
   if reaperNPC then
     local data = reaperNPC.data
-    if data.whitelist then return data.whitelist[soulNPC.id] end
+    return data.whitelist[soulNPC.id]
   end
   return not (NPC.config[soulNPC.id].hasNoSoul or soulNPC.data.hasNoSoul)
 end
@@ -148,7 +151,7 @@ function reaper.prime(n)
   data.cooldown = data.cooldown or 0
   data.souls = data.souls or {}
   data.queque = data.queque or 0
-  data.whitelist = data.whitelist or redstone.parseList(data._settings.whitelist)
+  data.whitelist = data.whitelist or redstone.parseListMAP(data._settings.whitelist)
 
   data.redhitbox = redstone.basicDirectionalRedHitBox(n, (data.frameX + 2)%4)
 end

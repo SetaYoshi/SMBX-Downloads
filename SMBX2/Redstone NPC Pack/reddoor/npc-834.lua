@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local door = {}
 
 local redstone = require("redstone")
@@ -38,6 +40,7 @@ door.config = npcManager.setNpcSettings({
   playerblock = false,
   playerblocktop = false,
   npcblock = false,
+  disabledespawn = false,
 
   effectid = 801  -- The door effect ID
 })

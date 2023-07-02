@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local reflector = {}
 
 local redstone = require("redstone")
@@ -56,6 +58,7 @@ reflector.config = npcManager.setNpcSettings{
 	ignorethrownnpcs = true,
 	notcointransformable = true,
 	staticdirection = true,
+  disabledespawn = false,
 
   thickness = 4, -- The thickness of the reflector image
 }
@@ -95,8 +98,6 @@ end
 function reflector.onRedTick(n)
   local data = n.data
   data.observ = false
-
-	redstone.setLayerLineguideSpeed(n)
 
 	if n:mem(0x136, FIELD_BOOL) then  -- NPC is being thrown
 		n.speedX, n.speedY = 0, 0

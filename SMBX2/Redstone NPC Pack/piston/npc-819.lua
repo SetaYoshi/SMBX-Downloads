@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local piston_ever = {}
 
 local redstone = require("redstone")
@@ -47,7 +49,8 @@ piston_ever.config = npcManager.setNpcSettings({
   blocknpc = true,
   playerblock = true,
   playerblocktop = true,
-  npcblock = true
+  npcblock = true,
+  disabledespawn = false,
 })
 
 piston_ever.prime = redstone.component.piston.prime

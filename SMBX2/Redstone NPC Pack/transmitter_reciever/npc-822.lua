@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local reciever = {}
 
 local redstone = require("redstone")
@@ -38,7 +40,8 @@ reciever.config = npcManager.setNpcSettings({
   blocknpc = true,
   playerblock = true,
   playerblocktop = true,
-  npcblock = true
+  npcblock = true,
+  disabledespawn = false,
 })
 
 function reciever.prime(n)

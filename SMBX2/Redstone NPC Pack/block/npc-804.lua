@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local block = {}
 
 local redstone = require("redstone")
@@ -40,7 +42,8 @@ block.config = npcManager.setNpcSettings({
   blocknpc = true,
   playerblock = true,
   playerblocktop = true,
-  npcblock = true
+  npcblock = true,
+  disabledespawn = false,
 })
 
 function block.prime(n)

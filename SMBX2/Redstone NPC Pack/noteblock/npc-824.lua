@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local note = {}
 
 local redstone = require("redstone")
@@ -32,7 +34,8 @@ note.config = npcManager.setNpcSettings({
   foreground = true,
   noblockcollision = true,
   nohurt = true,
-  jumphurt = true
+  jumphurt = true,
+  disabledespawn = false,
 })
 
 function note.prime(n)

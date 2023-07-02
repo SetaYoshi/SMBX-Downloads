@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local torch = {}
 
 local redstone = require("redstone")
@@ -37,6 +39,7 @@ torch.config = npcManager.setNpcSettings({
 	jumphurt = true,
 	nohurt = true,
 	noyoshi = true,
+  disabledespawn = false,
 })
 
 function torch.prime(n)

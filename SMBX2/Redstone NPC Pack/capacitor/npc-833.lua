@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local capacitor = {}
 
 local redstone = require("redstone")
@@ -54,6 +56,7 @@ capacitor.config = npcManager.setNpcSettings({
   playerblock = true,
   playerblocktop = true,
   npcblock = true,
+  disabledespawn = false,
 
   showCounter = true,
 })

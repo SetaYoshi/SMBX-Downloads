@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local redblock = {}
 
 local redstone = require("redstone")
@@ -59,6 +61,7 @@ redblock.config = npcManager.setNpcSettings({
   blocknpctop = true,
   playerblock = true,
   playerblocktop = true,
+  disabledespawn = false,
 
   grabfix = true -- custom fix for the "death when thrown inside a wall"
 })

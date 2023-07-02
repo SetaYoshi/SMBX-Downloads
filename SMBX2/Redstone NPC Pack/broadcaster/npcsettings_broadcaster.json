@@ -1,0 +1,13 @@
+{
+	"style" : "groupbox",
+	"title" : "Broadcaster Properties",
+	"layout": [
+        {
+			"control": "lineEdit",
+			"type": "int",
+			"name": "broadcastID",
+			"title": "Broadcast ID",
+			"tooltip": "What ID should the broadcast activate"
+		}
+	]
+}

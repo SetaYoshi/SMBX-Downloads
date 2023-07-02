@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local flame = {}
 
 local redstone = require("redstone")
@@ -43,6 +45,7 @@ flame.config = npcManager.setNpcSettings({
   nogravity = true,
   noblockcollision = true,
   ishot = true,
+  disabledespawn = false,
 
   firespeed = 4,  -- The speed of the fireball in pixel/frame
   bouncetype = 1  -- The different flame's AIs when colliding with a wall: 0: Bounce, 1: Destroy, 2: Pass-through

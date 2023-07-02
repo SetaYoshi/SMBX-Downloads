@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local deadsickblock = {}
 
 local redstone = require("redstone")
@@ -49,6 +51,7 @@ deadsickblock.config = npcManager.setNpcSettings({
   blocknpctop = false,
   playerblock = false,
   playerblocktop = false,
+  disabledespawn = false,
 
   hasnosoul = false
 })

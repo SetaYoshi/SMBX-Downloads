@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local piston = {}
 
 local redstone = require("redstone")
@@ -35,6 +37,7 @@ piston.config = npcManager.setNpcSettings({
   playerblock = true,
   playerblocktop = true,
   npcblock = true,
+  disabledespawn = false,
 
   alwayspull = false,
   pushMax = 320,

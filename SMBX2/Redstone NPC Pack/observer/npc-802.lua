@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local observer = {}
 
 local redstone = require("redstone")
@@ -42,6 +44,7 @@ observer.config = npcManager.setNpcSettings({
   playerblock = true,
   playerblocktop = true,
   npcblock = true,
+  disabledespawn = false,
 
   poweronmove = true  -- When the observer gets moved by a piston, activate the observer
 })

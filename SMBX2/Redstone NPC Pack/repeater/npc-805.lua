@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local repeater = {}
 
 local redstone = require("redstone")
@@ -44,7 +46,8 @@ repeater.config = npcManager.setNpcSettings({
   blocknpc = true,
   playerblock = true,
   playerblocktop = true,
-  npcblock = true
+  npcblock = true,
+  disabledespawn = false,
 })
 
 

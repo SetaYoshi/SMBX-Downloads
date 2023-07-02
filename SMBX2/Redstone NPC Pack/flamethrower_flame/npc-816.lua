@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local flamethrower = {}
 
 local redstone = require("redstone")
@@ -45,6 +47,7 @@ flamethrower.config = npcManager.setNpcSettings({
   playerblock = true,
   playerblocktop = true,
   npcblock = true,
+  disabledespawn = false,
 })
 local EXISTS_FLAME
 local iceBlock, iceBlock_MAP
@@ -79,7 +82,6 @@ end
 
 function flamethrower.onRedTick(n)
   if Defines.levelFreeze then return end
-  redstone.setLayerLineguideSpeed(n)
 
   local data = n.data
   data.observ = false

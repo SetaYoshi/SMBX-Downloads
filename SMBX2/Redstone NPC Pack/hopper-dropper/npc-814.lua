@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local hopper = {}
 
 local redstone = require("redstone")

@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local tnt = {}
 
 local redstone = require("redstone")
@@ -43,6 +45,7 @@ tnt.config = npcManager.setNpcSettings({
   playerblock = true,
   playerblocktop = true,
   npcblock = true,
+  disabledespawn = false,
 
   effectid = 800, -- The explosion effect ID
   explosionradius = 128,    -- The radius of the explosion

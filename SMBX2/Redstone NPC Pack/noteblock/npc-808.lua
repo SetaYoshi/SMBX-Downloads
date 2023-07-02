@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local noteblock = {}
 
 local redstone = require("redstone")
@@ -39,7 +41,8 @@ noteblock.config = npcManager.setNpcSettings({
   blocknpc = true,
   playerblock = true,
   playerblocktop = true,
-  npcblock = true
+  npcblock = true,
+  disabledespawn = false,
 })
 
 local animTimer = 0

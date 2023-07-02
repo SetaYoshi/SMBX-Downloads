@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local spyblock = {}
 
 local redstone = require("redstone")
@@ -40,7 +42,8 @@ spyblock.config = npcManager.setNpcSettings({
   blocknpc = true,
   playerblock = true,
   playerblocktop = true,
-  npcblock = true
+  npcblock = true,
+  disabledespawn = false,
 })
 
 function spyblock.prime(n)
@@ -55,7 +58,7 @@ function spyblock.prime(n)
   data.isOn = data.isOn or false
   data.prevState = data.prevState or false
   data.type = data._settings.type or 0
-  data.whitelist = data.whitelist or redstone.parseList(data._settings.whitelist)
+  data.whitelist = data.whitelist or redstone.parseListMAP(data._settings.whitelist)
 
   data.redhitbox = redstone.basicDirectionalRedHitBox(n, (data.frameX + 2)%4)
 end
@@ -102,7 +105,7 @@ end
 local function scan(n, v, check)
   local data = n.data
 
-  if v and (not data.whitelist or data.whitelist[v[check]]) and not v.isHidden then
+  if v and (#table.keys(data.whitelist) == 0 or data.whitelist[v[check]]) and not v.isHidden then
     data.isOn = true
     passPower(n, 15)
     return true

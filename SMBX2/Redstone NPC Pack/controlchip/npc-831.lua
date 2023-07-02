@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local chip = {}
 
 local redstone = require("redstone")
@@ -34,7 +36,8 @@ chip.config = npcManager.setNpcSettings({
   nogravity = true,
   notcointransformable = true,
 	nohurt = true,
-	noyoshi = true
+	noyoshi = true,
+  disabledespawn = false,
 })
 
 local function luafy(msg)

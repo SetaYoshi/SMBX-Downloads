@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local piston_ehor = {}
 
 local redstone = require("redstone")
@@ -46,7 +48,8 @@ piston_ehor.config = npcManager.setNpcSettings({
   blocknpc = true,
   playerblock = true,
   playerblocktop = true,
-  npcblock = true
+  npcblock = true,
+  disabledespawn = false,
 })
 
 piston_ehor.prime = redstone.component.piston.prime

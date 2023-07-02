@@ -36,7 +36,8 @@ broadcaster.config = npcManager.setNpcSettings({
   blocknpc = true,
   playerblock = true,
   playerblocktop = true,
-  npcblock = true
+  npcblock = true,
+  disabledespawn = false,
 })
 
 function broadcaster.prime(n)
@@ -48,18 +49,19 @@ function broadcaster.prime(n)
   data.frameX = data.frameX or 0
   data.frameY = data.frameY or 0
 
-  data.redarea = data.redarea or redstone.basicRedArea(n)
-  data.redhitbox = data.redhitbox or redstone.basicRedHitBox(n)
+  data.broadcastID = data.broadcastID or redstone.parseNumList(data._settings.broadcastID)
+
+  data.hitbox = Colliders.Box(0, 0, 800, 600)
+  data.hitbox.direction = 0
 end
 
 function broadcaster.onRedTick(n)
   local data = n.data
   data.observ = false
 
-  if data.power > 0 and redstone.npcList[1] then
-    redstone.updateRedArea(n)
-    redstone.updateRedHitBox(n)
-    redstone.passEnergy{source = n, npcList = redstone.npcList, power = data.power, hitbox = data.redhitbox, area = data.redarea}
+  if data.power > 0 then
+    data.hitbox.x, data.hitbox.y = n.x - 400, n.y - 300
+    redstone.passDirectionEnergy{source = n, npcList = data.broadcastID, power = data.power, hitbox = data.hitbox}
   end
 
   if (data.power == 0 and data.powerPrev ~= 0) or (data.power ~= 0 and data.powerPrev == 0) then
@@ -75,9 +77,7 @@ function broadcaster.onRedTick(n)
   redstone.resetPower(n)
 end
 
-function broadcaster.onRedDraw(n)
-  redstone.drawNPC(n)
-end
+broadcaster.onRedDraw = redstone.drawNPC
 
 redstone.register(broadcaster)
 

@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local operator = {}
 
 local redstone = require("redstone")
@@ -47,7 +49,8 @@ operator.config = npcManager.setNpcSettings({
   blocknpc = true,
   playerblock = true,
   playerblocktop = true,
-  npcblock = true
+  npcblock = true,
+  disabledespawn = false,
 })
 
 

@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local transmitter = {}
 
 local redstone = require("redstone")
@@ -43,6 +45,7 @@ transmitter.config = npcManager.setNpcSettings({
   playerblock = true,
   playerblocktop = true,
   npcblock = true,
+  disabledespawn = false,
 
   debug = true,
   effectid = 802,

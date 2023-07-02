@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local lectern = {}
 
 local redstone = require("redstone")
@@ -43,6 +45,7 @@ lectern.config = npcManager.setNpcSettings({
 	noyoshi = true,
   playerblocktop = true,
   npcblocktop = true,
+  disabledespawn = false,
 
   textboxwidth = 620  -- Determines the width of the textbox shown
 })

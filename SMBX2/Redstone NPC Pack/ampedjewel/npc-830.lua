@@ -1,3 +1,5 @@
+-- v1.3.0
+
 local jewel = {}
 
 local redstone = require("redstone")
@@ -37,11 +39,13 @@ jewel.config = npcManager.setNpcSettings({
   notcointransformable = true,
 	nohurt = true,
 	noyoshi = true,
+  disabledespawn = false,
 
   lightningframes = 3,  -- The amount of frames in the lightning image
   lightningframespeed = 2,  -- The framespeed for the lightning animation
   lightningthickness = -1,  -- Set -1 for random, otherwise use this value
 })
+
 npcManager.registerHarmTypes(jewel.id, {HARM_TYPE_JUMP, HARM_TYPE_SPINJUMP}, {[HARM_TYPE_JUMP] = 10, [HARM_TYPE_SPINJUMP] = 10})
 
 lineguide.registerNpcs(jewel.id)
@@ -101,7 +105,6 @@ function jewel.onRedTick(n)
   local data = n.data
   data.observ = false
 
-  redstone.setLayerLineguideSpeed(n)
   if reset then
     rays = {}
     reset = false
