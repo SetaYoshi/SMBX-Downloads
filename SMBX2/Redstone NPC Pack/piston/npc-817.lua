@@ -4,6 +4,7 @@ local piston = {}
 
 local redstone = require("redstone")
 local npcManager = require("npcManager")
+local expandedDefines = require("expandedDefines")
 
 local insert = table.insert
 
