@@ -52,14 +52,13 @@ function broadcaster.prime(n)
   data.broadcastID = data.broadcastID or redstone.parseNumList(data._settings.broadcastID)
 
   data.hitbox = Colliders.Box(0, 0, 800, 600)
-  data.hitbox.direction = 0
 end
 
 function broadcaster.onRedTick(n)
   local data = n.data
   data.observ = false
 
-  if data.power > 0 then
+  if data.power > 0 and #data.broadcastID > 0 then
     data.hitbox.x, data.hitbox.y = n.x - 400, n.y - 300
     redstone.passDirectionEnergy{source = n, npcList = data.broadcastID, power = data.power, hitbox = data.hitbox}
   end

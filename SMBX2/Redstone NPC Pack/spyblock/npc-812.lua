@@ -63,10 +63,11 @@ function spyblock.prime(n)
   data.redhitbox = redstone.basicDirectionalRedHitBox(n, (data.frameX + 2)%4)
 end
 
-local TYPE_PLAYER = 0
-local TYPE_NPC = 1
-local TYPE_BLOCK = 2
-local TYPE_POWERED = 3
+local TYPE_PLAYER  = 0
+local TYPE_NPC     = 1
+local TYPE_BLOCK   = 2
+local TYPE_BGO     = 3
+local TYPE_POWERED = 4
 
 local function passPower(n, power)
   local data = n.data
@@ -89,6 +90,8 @@ getCheckType[TYPE_NPC] = "id"
 getFuncType[TYPE_BLOCK] = Block.iterateIntersecting
 getCheckType[TYPE_BLOCK] = "id"
 
+getFuncType[TYPE_BGO] = BGO.iterateIntersecting
+getCheckType[TYPE_BGO] = "id"
 
 local function scanBox(n, dir)
   if dir == 0 then

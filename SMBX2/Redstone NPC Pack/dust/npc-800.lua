@@ -1,5 +1,3 @@
--- v1.3.0
-
 local dust = {}
 
 local redstone = require("redstone")
@@ -9,7 +7,12 @@ local insert, iclone = table.insert, table.iclone
 
 dust.name = "dust"
 dust.id = NPC_ID
-dust.order = 0.76
+
+dust.test = function()
+  return "isDust", function(x)
+    return (x == dust.id or x == dust.name)
+  end
+end
 
 dust.config = npcManager.setNpcSettings({
 	id = dust.id,
@@ -33,66 +36,29 @@ dust.config = npcManager.setNpcSettings({
 	jumphurt = true,
 	nohurt = true,
 	noyoshi = true,
-  disabledespawn = false,
 
   basicdust = false,  -- A less laggy, but less accurate dust AI
-  debug = true,      -- Debugs the power level of the NPC
-  automap = true,    -- Automaps index 0 automatically
-	istransparent = true,
+  debug = false,      -- Debugs the power level of the NPC
+  automap = true    -- Automaps index 0 automatically
 })
 
 local dustMap = {}
-dustMap["true true true true"]     = 1
-dustMap["true false true false"]   = 2
-dustMap["false true false true"]   = 3
-dustMap["false false true true"]   = 4
-dustMap["false true true false"]   = 5
-dustMap["true true false false"]   = 6
-dustMap["true false false true"]   = 7
-dustMap["true false true true"]    = 8
-dustMap["false true true true"]    = 9
-dustMap["true true true false"]    = 10
-dustMap["true true false true"]    = 11
-dustMap["true false false false"]  = 12
-dustMap["false true false false"]  = 13
-dustMap["false false true false"]  = 14
-dustMap["false false false true"]  = 15
+dustMap["true true true true"] = 1
+dustMap["true false true false"] = 2
+dustMap["false true false true"] = 3
+dustMap["false false true true"] = 4
+dustMap["false true true false"] = 5
+dustMap["true true false false"] = 6
+dustMap["true false false true"] = 7
+dustMap["true false true true"] = 8
+dustMap["false true true true"] = 9
+dustMap["true true true false"] = 10
+dustMap["true true false true"] = 11
+dustMap["true false false false"] = 12
+dustMap["false true false false"] = 13
+dustMap["false false true false"] = 14
+dustMap["false false false true"] = 15
 dustMap["false false false false"] = 16
-
-local networks = {}
-
-local function collectDust(n, net)
-  if n.data.redNetwork == net then return end
-  n.data.redNetwork = net
-
-  if not n.data.redhitbox then return end
-
-  net[n] = {{}, {}, {}, {}}
-  for dir, coll in ipairs(n.data.redhitbox) do
-    local l = Colliders.getColliding{a = coll, b = redstone.comID, btype = Colliders.NPC, filter = function(v) return v ~= n and not v.isHidden end} 
-    for _, npc in ipairs(l) do
-      table.insert(net[n][dir], npc)
-
-      collectDust(npc, net)
-    end
-  end
-end
-
-local function createNetwork(n)
-  local t = {}
-  local k = #networks + 1
-  networks[k] = t
-  t.ID = k
-  
-  collectDust(n, t)
-end
-
-local function destroyNetwork(k, t)
-  for _, v in ipairs(t) do
-    v.data.redNetwork = nil
-  end
-  networks[k] = nil
-end
 
 local function foundDust(n, coll)
   for k, v in NPC.iterateIntersecting(coll.x, coll.y, coll.x + coll.width, coll.y + coll.height) do
@@ -102,6 +68,7 @@ local function foundDust(n, coll)
   end
   return false
 end
+
 
 local function setFrameX(n)
   redstone.updateRedHitBox(n)
@@ -116,31 +83,41 @@ local function setFrameX(n)
 end
 
 
+local dustQueque = {}
+local dustRemain = {}
+
 
 -- Look guys, I tried my best here.
--- delete network if x, y, layer state, or color state changed!!!
 local function instantpower(n)
   local power = n.data.power
-
-  if not n.data.redNetwork then
-    createNetwork(n)
-  end
-
-  local net = n.data.redNetwork
-  for dir, t in ipairs(net[n]) do
-    for _, v in ipairs(t) do
-      if v.id == dust.id then
-        if n.data.power > v.data.power + 1 and n.data.colorType == v.data.colorType and not n.isHidden then
-          redstone.setEnergy(v, n.data.power - 1)
-          redstone.updateRedArea(v)
-          redstone.updateRedHitBox(v)
-          instantpower(v)
-        end
-      else
-          redstone.energyFilter(v, n, n.data.power, dir - 1, n.data.redhitbox[dir])
+  local list = NPC.get(redstone.comID, n.section) --Colliders.getColliding{a = data.redarea, b = redstone.comID, btype = Colliders.NPC, filter = redstone.nofilter}
+  dustRemain = {n}
+  dustQueque = {}
+  while dustRemain[1] do
+    for _, dust in ipairs(dustRemain) do
+      local data = dust.data
+      for dir, coll in ipairs(data.redhitbox) do
+        for k = #list, 1, -1 do
+          local v = list[k]
+          if Colliders.collide(v, coll) then
+            if v.id == dust.id then
+              if v ~= dust and data.power > v.data.power + 1 and data.colorType == v.data.colorType then
+                redstone.setEnergy(v, dust.data.power - 1)
+                redstone.updateRedArea(v)
+                redstone.updateRedHitBox(v)
+                insert(dustQueque, v)
+              end
+            else
+              redstone.energyFilter(v, dust, dust.data.power, dir - 1, coll)
+            end
+          end
         end
       end
+    end
+    dustRemain = iclone(dustQueque)
+    dustQueque = {}
   end
+
 end
 
 function dust.prime(n)
@@ -154,12 +131,16 @@ function dust.prime(n)
 
   data.colorType = data._settings.color or 0
   data.pistIgnore = data.pistIgnore or true
+  data.isTransparent = data.isTransparent or true
 
   data.redarea = data.redarea or redstone.basicRedArea(n)
   data.redhitbox = data.redhitbox or redstone.basicRedHitBox(n)
 
   n.priority = -46
 end
+
+
+
 
 local function onRedPowerBasic(n, c, p, d, hitbox)
   if c.id == dust.id then
@@ -178,9 +159,6 @@ local function onRedTickBasic(n)
   if dust.config.automap and data.frameX == 0 then
     setFrameX(n)
   end
-  if dust.config.debug and not n.isHidden then
-    redstone.printNPC(n.data.power, n, 12, 12)
-  end
 
   if data.power > 0 then
     redstone.updateRedArea(n)
@@ -188,7 +166,14 @@ local function onRedTickBasic(n)
     redstone.passEnergy{source = n, power = data.power, hitbox = data.redhitbox, area = data.redarea}
   end
 
-  data.frameY = ((data.power == 0 and 0) or (data.power < 8 and 1) or 2) + 3*data.colorType
+  if data.power == 0 then
+    data.frameY = 0
+  elseif data.power < 8 then
+    data.frameY = 1
+  else
+    data.frameY = 2
+  end
+  data.frameY = data.frameY + 3*data.colorType
 
   data.observ = data.powerPrev ~= data.power
   redstone.resetPower(n)
@@ -204,26 +189,37 @@ local function onRedPowerComplex(n, c, p, d, hitbox)
   end
 end
 
-local function onRedTickComplex(n)
-  n.data.observ = false
+local function onRedTickComplex(n, v)
+  local data = n.data
+  data.observ = false
 
-  if dust.config.automap and n.data.frameX == 0 then
+  if dust.config.automap and data.frameX == 0 then
     setFrameX(n)
   end
 end
 
 local function onRedTickEndComplex(n)
   local data = n.data
-  
+
+  if data.power == 0 then
+    data.frameY = 0
+  elseif data.power >= 8 then
+    data.frameY = 2
+  else
+    data.frameY = 1
+  end
+  data.frameY = data.frameY + 3*data.colorType
+
   if dust.config.debug and not n.isHidden then
     redstone.printNPC(n.data.power, n, 12, 12)
   end
 
-  data.frameY = ((data.power == 0 and 0) or (data.power < 8 and 1) or 2) + 3*data.colorType
-  
-  data.observ = data.powerPrev ~= data.power  
+  data.observ = data.powerPrev ~= data.power
+
   redstone.resetPower(n)
 end
+
+
 
 
 if dust.config.basicdust then
@@ -235,6 +231,7 @@ else
   dust.onRedTickEnd = onRedTickEndComplex
 end
 
+dust.onRedDraw = redstone.drawNPC
 
 dust.onRedDraw = redstone.drawNPC
 

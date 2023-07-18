@@ -47,7 +47,7 @@ transmitter.config = npcManager.setNpcSettings({
   npcblock = true,
   disabledespawn = false,
 
-  debug = true,
+  debug = false,
   effectid = 802,
 })
 

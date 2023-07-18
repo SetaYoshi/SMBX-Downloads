@@ -5,7 +5,7 @@ local tnt = {}
 local redstone = require("redstone")
 local npcManager = require("npcManager")
 
-local floor = math.floor
+local floor, clamp = math.floor, math.clamp
 
 tnt.name = "tnt"
 tnt.id = NPC_ID

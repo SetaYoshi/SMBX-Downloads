@@ -155,7 +155,7 @@ function source.prime(n)
   n.direction = 1
 end
 
-local maxdist = 1000
+local maxdist = 10000
 local createray
 function createray(start, r, color, x, blacklist, deathray, found)
 	if x <= 0 then return end

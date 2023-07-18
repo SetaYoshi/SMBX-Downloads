@@ -46,7 +46,7 @@ absorber.config = npcManager.setNpcSettings({
 })
 npcManager.registerHarmTypes(absorber.id, {})
 
-local colorlist = {Color.white, Color.red..0.8, Color(1, 0.42, 0, 0.8), Color.purple..0.8, Color.pink..0.8}
+local colorlist = {Color.white, Color.red..0.8, Color(1, 0.42, 0, 0.8), Color(0.5, 0, 1, 0.8), Color.pink..0.8}
 
 function absorber.prime(n)
   local data = n.data

@@ -61,7 +61,7 @@ local ribbonlist = {}
 local function hasSoul(soulNPC, reaperNPC)
   if reaperNPC then
     local data = reaperNPC.data
-    return data.whitelist[soulNPC.id]
+    return #table.unmap(data.whitelist) == 0 or data.whitelist[soulNPC.id]
   end
   return not (NPC.config[soulNPC.id].hasNoSoul or soulNPC.data.hasNoSoul)
 end
