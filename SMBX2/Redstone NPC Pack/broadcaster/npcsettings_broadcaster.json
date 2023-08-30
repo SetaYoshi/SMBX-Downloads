@@ -8,6 +8,13 @@
 			"name": "broadcastID",
 			"title": "Broadcast ID",
 			"tooltip": "What ID should the broadcast activate"
+		},
+		{
+			"control": "multiLineEdit",
+			"name": "filter",
+			"title": "Advanced Filter",
+			"tooltip": "Use custom lua code to filter out the object being scanned.",
+			"value-default": "-- Use the variable: npc to make your code\n-- Use the return keyword to decide if it passes the filter\n-- Just do 'return true' to ignore the filter\nreturn true"
 		}
 	]
 }

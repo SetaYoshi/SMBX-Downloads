@@ -41,11 +41,11 @@ chip.config = npcManager.setNpcSettings({
 })
 
 local function luafy(msg)
-  return "return function(param) local timer, npc, powerLevel = param.timer, param.attachedNPC, param.powerLevel "..msg.." return {timer = timer, powerLevel = powerLevel} end"
+  return "return function(param) local timer, npc, powerOut = param.timer, param.attachedNPC, param.powerLevel "..msg.." return {timer = timer, powerLevel = powerOut} end"
 end
 
 local function defaultfunc(onTime, offTime, power)
-  return "if timer <= "..onTime.." then powerLevel = "..power.." else powerLevel = 0 end if timer >= "..(offTime + onTime).." then timer = 0 end"
+  return "if timer <= "..onTime.." then powerOut = "..power.." else powerOut = 0 end if timer >= "..(offTime + onTime).." then timer = 0 end"
 end
 
 function chip.prime(n)

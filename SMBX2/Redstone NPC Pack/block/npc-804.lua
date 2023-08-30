@@ -10,7 +10,7 @@ block.id = NPC_ID
 block.order = 0.24
 
 block.onRedPower = function(n, c, power, dir, hitbox)
-  if redstone.is(c.id, "operator", "alternator", "observer", "spyblock", "repeater", "capacitor", "lever", "button", "reciever", "reaper", "chip") or (redstone.is.torch(c.id) and dir == 1) then
+  if redstone.is(c.id, "operator", "alternator", "observer", "spyblock", "repeater", "capacitor", "lever", "button", "reciever", "reaper", "chip", "fuse")  or (redstone.is.torch(c.id) and dir == 1) then
     redstone.setEnergy(n, power)
   else
     return true

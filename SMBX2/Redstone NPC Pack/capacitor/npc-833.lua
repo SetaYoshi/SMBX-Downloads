@@ -17,6 +17,11 @@ capacitor.onRedPower = function(n, c, power, dir, hitbox)
   
   if dir == -1 or dir == n.data.frameX or redstone.is.operator(c.id) then
     redstone.setEnergy(n, power)
+    if not redstone.is.operator(c.id) then
+      if data.powerPrev == 0 then
+        data.updateCounter = true
+      end
+    end
   elseif redstone.is.repeater(c.id) and (dir == (data.frameX + 1)%4 or dir == (data.frameX - 1)%4) then
     data.updateCounter = true
   else
@@ -122,10 +127,6 @@ function capacitor.onRedTick(n)
   end
 
   if data.power > 0 then
-    if data.powerPrev == 0 then
-      updateCounter(n)
-    end
-
     if data.unlocked then
       redstone.updateDirectionalRedHitBox(n, data.frameX)
       redstone.passDirectionEnergy{source = n, power = data.power, hitbox = data.redhitbox}

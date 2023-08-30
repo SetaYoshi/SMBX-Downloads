@@ -71,7 +71,11 @@ function lectern.prime(n)
   data.layout = {}
   for k, v in ipairs(data.pagetext) do
     v = v:gsub("<pipe>", "|")
-    data.layout[k] = textplus.layout(v, lectern.config.textboxwidth, {xscale = 2, yscale = 2, font = font})
+    if pcall(function() data.layout[k] = textplus.layout(v, lectern.config.textboxwidth, {xscale = 2, yscale = 2, font = font}) end) then
+    else
+      Misc.dialog("[LECTERN] x:"..n.x..", y:"..n.y..", section:"..n.section.."\n\nIncorrect text format")
+    end
+    
   end
 
   if data._settings.texture and data._settings.texture ~= "" then

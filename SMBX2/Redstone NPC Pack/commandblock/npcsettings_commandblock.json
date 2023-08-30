@@ -16,7 +16,7 @@
 			"name": "script",
 			"title": "Script",
 			"tooltip": "The script that will be executed. Check the environment section in the NPC's tooltip for more info.",
-			"value-default": ""
+			"value-default": "-- Use the variables: commandblock, power, powerPrev, direction, script to make your code\n-- commandblock: The command block npc\n-- power: The power level of the command block\n-- powerPrev: The power level at the previous frame\n-- direction: The direction the command block got powered. Left: 0, Up: 1, Right: 2, Down: 3\n-- script: This script as a string"
 		}
 	]
 }

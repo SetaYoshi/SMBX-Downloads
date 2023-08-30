@@ -5,7 +5,7 @@ local operator = {}
 local redstone = require("redstone")
 local npcManager = require("npcManager")
 
-local max, clamp = math.max, math.clamp
+local min, max, clamp, abs = math.min, math.max, math.clamp, math.abs
 
 operator.name = "operator"
 operator.id = NPC_ID
@@ -51,6 +51,8 @@ operator.config = npcManager.setNpcSettings({
   playerblocktop = true,
   npcblock = true,
   disabledespawn = false,
+
+  hasnooul = true,
 })
 
 
@@ -77,7 +79,6 @@ local mouthAI = function(n, c, power, dir, hitbox)
 end
 
 local plusAI = function(n, c, power, dir, hitbox)
-  if not operations[n.id] then Misc.dialog(n.id) end
   return operations[n.id].plus(n, c, c.data.power, dir, hitbox)
 end
 
@@ -119,7 +120,7 @@ function operator.onRedLoad()
       end
     end,
 
-    -- XOR GATR
+    -- XOR GATE
     ["minus"] = function(n, c, power, dir, hitbox)
       local power_eyes = c:powerSide('eyes') > 0
       local power_plus = c:powerSide('plus') > 0
@@ -144,7 +145,7 @@ function operator.onRedLoad()
   registerOperation(redstone.id.capacitor, {
     -- EQUAL TO
     ["mouth"] = function(n, c, power, dir, hitbox)
-      if power == n.data.maxcapacitance then
+      if power == (n.data.maxcapacitance - 1) then
         n.data.unlocked = true
         return power
       else
@@ -154,7 +155,7 @@ function operator.onRedLoad()
 
     -- GREATER THAN
     ["plus"] = function(n, c, power, dir, hitbox)
-      if power > n.data.maxcapacitance then
+      if power > (n.data.maxcapacitance - 1) then
         n.data.unlocked = true
         return power
       else
@@ -164,13 +165,22 @@ function operator.onRedLoad()
 
     -- LESS THAN
     ["minus"] = function(n, c, power, dir, hitbox)
-      if power < n.data.maxcapacitance then
+      if power < (n.data.maxcapacitance - 1) then
         n.data.unlocked = true
         return power
       else
         return 0
       end
     end,
+  })
+
+  registerOperation(redstone.id.fuse, {
+    ["plus"] = function(n, c, power, dir, hitbox)
+      return power % n.data.limit
+    end,
+    ["minus"] = function(n, c, power, dir, hitbox)
+      return power % n.data.limit
+    end
   })
 
   registerOperation(redstone.id.spyblock, {
@@ -187,7 +197,16 @@ function operator.onRedLoad()
       -- ALL DIFF
       elseif n.data.type == 2 then
         return abs(c.data.diff)
+
+      -- COUNT
+      elseif n.data.type == 3 then
+        local out = 0
+        if c:powerSide('eyes') ~= 0 then out = out + 5 end
+        if c:powerSide('plus') ~= 0 then out = out + 5 end
+        if c:powerSide('minus') ~= 0 then out = out + 5 end
+        return out
       end
+
       return 0
     end,
 
@@ -201,7 +220,15 @@ function operator.onRedLoad()
         if c.data.diff > 0 then
           return c.data.diff
         end
+      
+      -- COUNT
+      elseif n.data.type == 3 then
+        local out = 0
+        if c:powerSide('eyes') ~= 0 then out = out + 8 end
+        if c:powerSide('minus') ~= 0 then out = min(15, out + 8) end
+        return out
       end
+
       return 0
     end,
 
@@ -215,7 +242,15 @@ function operator.onRedLoad()
         if c.data.diff < 0 then
           return -c.data.diff
         end
+      
+      -- COUNT
+      elseif n.data.type == 3 then
+        local out = 0
+        if c:powerSide('eyes') ~= 0 then out = out + 8 end
+        if c:powerSide('plus') ~= 0 then out = min(15, out + 8) end
+        return out
       end
+
       return 0
     end
   })

@@ -45,8 +45,7 @@ local split, gmatch, find, sub, startswith, endswith = string.split, string.gmat
 
 --[[
   TODO
-  fix up transmitter
-  fix up source (use flame algorithm)
+  THE PISTON UPDATE!!!
 ]]
 
 -- Set this to false and the script will no longer stop NPCs from despawning. This will reduce lag in your level! I reccomend you set this to false and install spawnzones into your level
@@ -228,9 +227,10 @@ end
       direction of power (0:left, 1:up, 2:right, 3:down). If left empty then direction is universal
 ]]
 function redstone.passDirectionEnergy(args)
-  local c = args.hitbox
+  local c = args.hitbox  
   args.npcList = args.npcList or redstone.comID
-  local list = Colliders.getColliding{a = c, b = args.npcList, btype = Colliders.NPC, filter = redstone.nothidden}
+  args.filter = args.filter or redstone.nothidden
+  local list = Colliders.getColliding{a = c, b = args.npcList, btype = Colliders.NPC, filter = args.filter}
   for _, n in ipairs(list) do
     if Colliders.collide(c, n) then
       local power = args.power
@@ -456,9 +456,9 @@ end
 
 --[[
   @parseListMAP(str)
-  Turns "1, 2, 3"  ->  {1,2 ,3}
+  Turns "1, 2, 3"  ->  {1, 2 ,3}
 ]]
-function redstone.parseNumList(str)
+function redstone.parseList(str)
   if str == "" then return {} end
 
   local t = {}

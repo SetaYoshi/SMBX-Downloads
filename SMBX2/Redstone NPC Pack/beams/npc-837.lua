@@ -141,7 +141,7 @@ local colorlist = {Color.red..0.8, Color(1, 0.42, 0, 0.8), Color(0.5, 0, 1, 0.8)
 function source.prime(n)
   local data = n.data
 
-  data.angleList = redstone.parseNumList(data._settings.angle or "0")
+  data.angleList = redstone.parseList(data._settings.angle or "0")
   data.angle = data.angleList[1]
   data.angleCurr = 1
 

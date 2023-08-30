@@ -79,7 +79,7 @@ function reflector.prime(n)
   if data.isOn == nil then data.isOn = true end
   data.isOnPrev = data.isOn
   data.deadTimer = data.deadTimer or 0
-  data.angleList = redstone.parseNumList(data._settings.angle or "0")
+  data.angleList = redstone.parseList(data._settings.angle or "0")
   data.angle = data.angleList[1]
   data.angleCurr = 1
 

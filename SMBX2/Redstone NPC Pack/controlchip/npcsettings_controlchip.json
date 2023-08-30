@@ -61,7 +61,7 @@
 			"name": "func",
 			"title": "Advanced Control",
 			"tooltip": "The function that controls the chip",
-			"value-default": ""
+			"value-default": "-- Use the variables: npc, powerOut to make your code\n-- npc: The npc attached to the control chip\n-- powerOut: The power level sent to the attached NPC\n\n-- Example\n-- if player:isGroundTouching() then\n--   powerOut = 0\n-- else\n--   powerOut = 15\n-- end"
 			}	
 		]}
 	]

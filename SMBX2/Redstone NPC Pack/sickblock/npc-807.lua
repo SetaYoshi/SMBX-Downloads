@@ -92,7 +92,7 @@ end
 
 
 function sickblock.onRedLoad()
-  infectionList = redstone.id("sickblock", "reflector")
+  infectionList = redstone.id("sickblock", "reflector", "respawnanchor")
 
   EXISTS_REAPER = redstone.id.reaper
   EXISTS_DEADSICKBLOCK = redstone.id.deadsickblock

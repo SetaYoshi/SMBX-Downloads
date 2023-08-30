@@ -58,13 +58,41 @@ local sfxeatfast = Audio.SfxOpen(Misc.resolveFile("reaperblock-consumefast.ogg")
 local ribbontail = Misc.resolveFile("npc-"..reaper.id.."-ribbon.ini")
 local ribbonlist = {}
 
-local function hasSoul(soulNPC, reaperNPC)
-  if reaperNPC then
-    local data = reaperNPC.data
-    return #table.unmap(data.whitelist) == 0 or data.whitelist[soulNPC.id]
-  end
-  return not (NPC.config[soulNPC.id].hasNoSoul or soulNPC.data.hasNoSoul)
+local function luafy(msg)
+  return "return function(object) local npc = object "..msg.." end"
 end
+
+local function hasSoul(soul, reaper)
+  local data = reaper.data
+
+  local whitelistpass = true
+  local filterpass = redstone.luaCall(data.filter, soul)
+  local hiddenpass = not soul.isHidden
+  local datapass = not (NPC.config[soul.id].hasnosoul or soul.data.hasNoSoul)
+
+  if #table.unmap(data.whitelist) ~= 0 then
+    whitelistpass = data.whitelist[soul.id]
+  end
+
+  if whitelistpass and filterpass and hiddenpass and datapass then
+    return true
+  end
+  
+end
+
+
+local function canKill(soul, reaper)
+  local data = reaper.data
+
+  local hiddenpass = not soul.isHidden
+  local datapass = not (NPC.config[soul.id].hasnosoul or soul.data.hasNoSoul)
+
+  if hiddenpass and datapass then
+    return true
+  end
+  
+end
+
 
 local function exposeSoul(n, soulNPC, dist)
   local data = n.data
@@ -101,7 +129,7 @@ end
 local function scanNPC(n)
   local x, y, w, h = collisionBox(n, n.data.frameX)
   for _, v in ipairs(NPC.getIntersecting(x, y, x + w, y + h)) do
-    if v.isValid and not v.isHidden and hasSoul(v) then
+    if v.isValid and not v.isHidden and canKill(v, n) then
       redstone.spawnEffect(10, v)
       v:kill()
     end
@@ -151,7 +179,9 @@ function reaper.prime(n)
   data.cooldown = data.cooldown or 0
   data.souls = data.souls or {}
   data.queque = data.queque or 0
+
   data.whitelist = data.whitelist or redstone.parseListMAP(data._settings.whitelist)
+  data.filter = redstone.luaParse("REAPERBLOCK", n, luafy(data._settings.filter or "return true"))
 
   data.redhitbox = redstone.basicDirectionalRedHitBox(n, (data.frameX + 2)%4)
 end

@@ -24,8 +24,15 @@
 			"control": "lineEdit",
 			"name": "whitelist",
 			"title": "White List",
-			"tooltip": "The spyblock will only scan for objects with matching ID. You can multiple IDs by seperating them by commas, ex <i>1, 2, 3</i><br>If left blank, then all objects IDs will be scanned. Note, for player spyblocks, it will filter characters instead of IDs.",
+			"tooltip": "The spyblock will only scan for objects with matching ID. You can multiple IDs by seperating them by commas, ex <i>1, 2, 3</i><br>If left blank, then all objects IDs will be scanned. Note: for player spyblocks, it will filter characters instead of IDs.",
 			"value-default": ""
-		}
+		},
+		{
+			"control": "multiLineEdit",
+			"name": "filter",
+			"title": "Advanced Filter",
+			"tooltip": "Use custom lua code to filter out the object being scanned.",
+			"value-default": "-- Use the variables: player, npc, block, bgo to make your code\n-- Use the return keyword to decide if it passes the filter\n-- Just do 'return true' to ignore the filter\nreturn true"
+		}	
 	]
 }

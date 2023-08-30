@@ -233,8 +233,6 @@ end
 
 dust.onRedDraw = redstone.drawNPC
 
-dust.onRedDraw = redstone.drawNPC
-
 redstone.register(dust)
 
 return dust

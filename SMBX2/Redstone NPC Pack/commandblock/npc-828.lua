@@ -49,7 +49,7 @@ commandblock.config = npcManager.setNpcSettings({
 })
 
 local function luafy(msg)
-  return "return function(param) local commandBlock, powerLevel, powerLevelPrevious, powerDirection, script = param.commandBlock, param.powerLevel, param.powerLevelPrevious, param.powerDirection, param.script "..msg.." return {} end"
+  return "return function(param) local commandblock, power, powerPrev, direction, script = param.commandBlock, param.powerLevel, param.powerLevelPrevious, param.powerDirection, param.script; "..msg.."\n return {} end"
 end
 
 function commandblock.prime(n)

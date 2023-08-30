@@ -63,7 +63,7 @@ function flamethrower.prime(n)
   data.frameX = data.frameX or 0
   data.frameY = data.frameY or 0
 
-  data.angleList = redstone.parseNumList(data._settings.angle or "0")
+  data.angleList = redstone.parseList(data._settings.angle or "0")
   data.angle = data.angleList[1]
   data.angleCurr = 1
   data.invspace = true

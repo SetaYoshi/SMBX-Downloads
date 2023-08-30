@@ -1,2 +1,1 @@
 gfxwidth=32
-hasNoSoul=true

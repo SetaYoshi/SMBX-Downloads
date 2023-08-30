@@ -48,7 +48,7 @@ flame.config = npcManager.setNpcSettings({
   disabledespawn = false,
 
   firespeed = 4,  -- The speed of the fireball in pixel/frame
-  bouncetype = 1  -- The different flame's AIs when colliding with a wall: 0: Bounce, 1: Destroy, 2: Pass-through
+  bouncetype = 0  -- The different flame's AIs when colliding with a wall: 0: Bounce, 1: Destroy, 2: Pass-through
 })
 
 -- A table of block IDs and the "melting" behavior

@@ -51,8 +51,10 @@ function torch.prime(n)
   data.frameX = data.frameX or 0
   data.frameY = data.frameY or 0
 
+  n.height = n.height*0.5
   data.redarea = data.redarea or redstone.basicRedArea(n)
   data.redhitbox = data.redhitbox or redstone.basicRedHitBox(n)
+  n.height = n.height*2
 end
 
 function torch.onRedTick(n)
@@ -60,8 +62,10 @@ function torch.onRedTick(n)
   data.observ = false
 
   if data.power == 0 then
+    n.height = n.height*0.5
     redstone.updateRedArea(n)
     redstone.updateRedHitBox(n)
+    n.height = n.height*2
     redstone.passEnergy{source = n, power = 15, hitbox = data.redhitbox, area = data.redarea}
   end
 

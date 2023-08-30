@@ -36,6 +36,9 @@ note.config = npcManager.setNpcSettings({
   nohurt = true,
   jumphurt = true,
   disabledespawn = false,
+
+  hasnosoul = true,
+  hasnoscan = true,
 })
 
 function note.prime(n)
@@ -48,6 +51,8 @@ function note.prime(n)
   data.frameY = data.frameY or 0
 
   data.timer = data.timer or 0
+
+  data.isTransparent = true
 end
 
 function note.onRedTick(n)

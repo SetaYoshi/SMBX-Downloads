@@ -46,6 +46,10 @@ spyblock.config = npcManager.setNpcSettings({
   disabledespawn = false,
 })
 
+local function luafy(msg)
+  return "return function(object) local player, npc, block, bgo = object, object, object, object "..msg.." end"
+end
+
 function spyblock.prime(n)
   local data = n.data
 
@@ -58,7 +62,9 @@ function spyblock.prime(n)
   data.isOn = data.isOn or false
   data.prevState = data.prevState or false
   data.type = data._settings.type or 0
+
   data.whitelist = data.whitelist or redstone.parseListMAP(data._settings.whitelist)
+  data.filter = redstone.luaParse("SPYBLOCK", n, luafy(data._settings.filter or "return true"))
 
   data.redhitbox = redstone.basicDirectionalRedHitBox(n, (data.frameX + 2)%4)
 end
@@ -105,10 +111,29 @@ local function scanBox(n, dir)
   end
 end
 
-local function scan(n, v, check)
+local function scan(n, v, id)
   local data = n.data
 
-  if v and (#table.unmap(data.whitelist) == 0 or data.whitelist[v[check]]) and not v.isHidden then
+  local whitelistpass = true
+  local filterpass = redstone.luaCall(data.filter, v)
+  local hiddenpass = not v.isHidden
+  local datapass = not (v.data and v.data.hasNoScan)
+
+  if #table.unmap(data.whitelist) ~= 0 then
+    whitelistpass = data.whitelist[id]
+  end
+
+  if datapass then
+    if type(v) == 'npc' then
+      datapass = NPC.config[id].hasnoscan
+    elseif type(v) == 'block' then
+      datapass = Block.config[id].hasnoscan
+    elseif type(v) == 'bgo' then
+      datapass = BGP.config[id].hasnoscan
+    end
+  end
+  
+  if whitelistpass and filterpass and hiddenpass and datapass then
     data.isOn = true
     passPower(n, 15)
     return true
@@ -126,11 +151,11 @@ function spyblock.onRedTick(n)
     local x, y, w, h = scanBox(n, data.frameX)
     if data.type == TYPE_PLAYER then
       for _, v in ipairs(func(x, y, x + w, y + h)) do
-        if scan(n, v, check) then break end
+        if scan(n, v, v[check]) then break end
       end
     else
       for _, v in func(x, y, x + w, y + h) do
-        if scan(n, v, check) then break end
+        if scan(n, v, v[check]) then break end
       end
     end
   end

@@ -40,6 +40,10 @@ broadcaster.config = npcManager.setNpcSettings({
   disabledespawn = false,
 })
 
+local function luafy(msg)
+  return "return function(object) local npc = object if npc.isHidden then return false end "..msg.." end"
+end
+
 function broadcaster.prime(n)
   local data = n.data
 
@@ -49,9 +53,10 @@ function broadcaster.prime(n)
   data.frameX = data.frameX or 0
   data.frameY = data.frameY or 0
 
-  data.broadcastID = data.broadcastID or redstone.parseNumList(data._settings.broadcastID)
+  data.broadcastID = data.broadcastID or redstone.parseList(data._settings.broadcastID)
+  data.filter = redstone.luaParse("BROADCASTER", n, luafy(data._settings.filter or "return true"))
 
-  data.hitbox = Colliders.Box(0, 0, 800, 600)
+  data.hitbox = Colliders.Box(0, 0, 1000, 1200)
 end
 
 function broadcaster.onRedTick(n)
@@ -59,8 +64,8 @@ function broadcaster.onRedTick(n)
   data.observ = false
 
   if data.power > 0 and #data.broadcastID > 0 then
-    data.hitbox.x, data.hitbox.y = n.x - 400, n.y - 300
-    redstone.passDirectionEnergy{source = n, npcList = data.broadcastID, power = data.power, hitbox = data.hitbox}
+    data.hitbox.x, data.hitbox.y = n.x - 500, n.y - 600
+    redstone.passDirectionEnergy{source = n, npcList = data.broadcastID, power = data.power, hitbox = data.hitbox, filter = data.filter}
   end
 
   if (data.power == 0 and data.powerPrev ~= 0) or (data.power ~= 0 and data.powerPrev == 0) then

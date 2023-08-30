@@ -9,6 +9,9 @@ fuse.name = "fuse"
 fuse.id = NPC_ID
 fuse.order = 0.365
 
+local sfxpop = Audio.SfxOpen(Misc.resolveFile("fuse-pop.ogg"))
+
+
 fuse.onRedPower = function(n, c, power, dir, hitbox)
   local data = n.data
 
@@ -30,6 +33,16 @@ fuse.onRedPower = function(n, c, power, dir, hitbox)
     else
       data.facing = 1
     end
+
+    if data.power >= data.limit and not data.broken and not redstone.is.operator(c.id) then
+      data.broken = true
+      data.observ = true
+      redstone.spawnEffect(10, n)
+      if redstone.onScreenSound(n) then
+        SFX.play(sfxpop)
+      end
+    end
+
   elseif redstone.is.repeater(c.id) then
     redstone.setEnergy(n, 15)
     return true
@@ -66,7 +79,6 @@ fuse.config = npcManager.setNpcSettings({
   disabledespawn = false,
 })
 
-local sfxpop = Audio.SfxOpen(Misc.resolveFile("fuse-pop.ogg"))
 
 
 function fuse.prime(n)
@@ -89,20 +101,13 @@ function fuse.onRedTick(n)
   local data = n.data
   data.observ = false
 
-  if data.power >= data.limit and not data.broken then
-    data.broken = true
-    data.observ = true
-    redstone.spawnEffect(10, n)
-    if redstone.onScreenSound(n) then
-      SFX.play(sfxpop)
-    end
-  end
+
 
   if data.broken then
     data.frameY = 2
   elseif data.power > 0 then
     data.frameY = 1
-      redstone.updateRedHitBox(n)
+    redstone.updateRedHitBox(n)
     redstone.passDirectionEnergy{source = n, power = data.power, hitbox = data.redhitbox[data.frameX + data.facing + 2]}
   else
     data.frameY = 0
