@@ -1,0 +1,24 @@
+{
+	"style" : "groupbox",
+	"title" : "Horizontal Extended Piston Properties",
+	"layout": [
+		{
+			"control": "comboBox",
+			"name": "dir",
+			"title": "Direction",
+			"type": "int",
+			"tooltip": "What direction should it face?",
+			"value-default": 0,
+			"elements": ["Left", "Right"]
+		},
+		{
+			"control": "comboBox",
+			"name": "type",
+			"title": "Type",
+			"type": "int",
+			"tooltip": "What type of piston?",
+			"value-default": 0,
+			"elements": ["Normal", "Sticky", "Honey"]
+		}		
+	]
+}

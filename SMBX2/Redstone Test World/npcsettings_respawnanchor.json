@@ -1,0 +1,26 @@
+{
+	"style" : "groupbox",
+	"title" : "Alternator Properties",
+	"layout": [
+		{
+			"control": "comboBox",
+			"name": "type",
+			"title": "Type",
+			"type": "int",
+			"tooltip": "What type of respawn anchor?",
+			"value-default": 0,
+			"elements": ["Respawn Anchor", "Death Host"]
+		},
+        {
+			"control": "spinBox",
+			"type": "int",
+			"name": "delay",
+			"title": "Death Delay",
+			"tooltip": "Only for death host. The delay between activation and killing the player. Delay is in units of 10 frames (1 = 10 frames, 2 = 20 frames)",
+			"value-default": 650,
+			"value-min": 1,
+			"value-max": 5000,
+			"single-step": 1
+		}		
+	]
+}

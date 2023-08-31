@@ -1,0 +1,26 @@
+{
+	"style" : "groupbox",
+	"title" : "Repeater Properties",
+	"layout": [
+        {
+			"control": "spinBox",
+			"type": "int",
+			"name": "delay",
+			"title": "Delay",
+			"tooltip": "The delay in between the power is repeated? Delay is in units of 10 frames (1 = 10 frames, 2 = 20 frames)",
+			"value-default": 2,
+			"value-min": 1,
+			"value-max": 9,
+			"single-step": 1
+		},
+		{
+			"control": "comboBox",
+			"name": "dir",
+			"title": "Direction",
+			"type": "int",
+			"tooltip": "What direction should it face?",
+			"value-default": 0,
+			"elements": ["Left", "Up", "Right", "Down"]
+		}
+	]
+}

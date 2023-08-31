@@ -1,0 +1,31 @@
+{
+	"style" : "groupbox",
+	"title" : "Light Source Settings",
+	"layout": [	
+		{
+			"control": "comboBox",
+			"name": "type",
+			"title": "Type",
+			"type": "int",
+			"tooltip": "Which subvariation should it use? Check the behavior section in the NPC's tooltip for more info.",
+			"value-default": 0,
+			"elements": ["Light Beam", "Death Ray"]
+		},
+		{
+			"control": "comboBox",
+			"name": "color",
+			"title": "Color",
+			"type": "int",
+			"tooltip": "What should the color output of the beam be?",
+			"value-default": 0,
+			"elements": ["Red", "Orange", "Purple", "Pink"]
+		},
+        {
+			"control": "lineEdit",
+			"name": "angle",
+			"title": "Angle",
+			"tooltip": "The angle, in degrees & counterclockwise, the beam travel will travel to. You can set multiple angles and it will cycle through the list everytime it recieves a pulse ex <i>0, 15, 30, 45, 60</i>",
+			"value-default": "0"
+		}
+	]
+}

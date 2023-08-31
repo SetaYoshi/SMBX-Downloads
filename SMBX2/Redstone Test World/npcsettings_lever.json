@@ -1,0 +1,15 @@
+{
+	"style" : "groupbox",
+	"title" : "Lever Properties",
+	"layout": [
+		{
+			"control": "comboBox",
+			"name": "state",
+			"title": "On/Off State",
+			"type": "int",
+			"tooltip": "Should the lever initialize by being on or off?",
+			"value-default": 0,
+			"elements": ["Off", "On"]
+		}
+	]
+}

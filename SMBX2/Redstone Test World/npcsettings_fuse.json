@@ -1,0 +1,26 @@
+{
+	"style" : "groupbox",
+	"title" : "Alternator Properties",
+	"layout": [
+	    {
+			"control": "spinBox",
+			"type": "int",
+			"name": "limit",
+			"title": "Limit",
+			"tooltip": "At what power level should the fuse break in?",
+			"value-default": 8,
+			"value-min": 1,
+			"value-max": 15,
+			"single-step": 1
+		},
+		{
+			"control": "comboBox",
+			"name": "dir",
+			"title": "Orientation",
+			"type": "int",
+			"tooltip": "the orientation of the NPC. This will change the direction of inputs and outputs.",
+			"value-default": 0,
+			"elements": ["Horizontal", "Vertical"]
+		}
+	]
+}

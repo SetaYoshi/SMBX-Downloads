@@ -1,0 +1,26 @@
+{
+	"style" : "groupbox",
+	"title" : "Capacitor Properties",
+	"layout": [
+        {
+			"control": "spinBox",
+			"type": "int",
+			"name": "capacitance",
+			"title": "Capacitance",
+			"tooltip": "How many pulses are needed until the capacitor is fully charged?",
+			"value-default": 5,
+			"value-min": 1,
+			"value-max": 15,
+			"single-step": 1
+		},
+		{
+			"control": "comboBox",
+			"name": "dir",
+			"title": "Direction",
+			"type": "int",
+			"tooltip": "What direction should it face?",
+			"value-default": 0,
+			"elements": ["Left", "Up", "Right", "Down"]
+		}
+	]
+}
