@@ -47,7 +47,7 @@ To download a specific NPC, go [here](https://github.com/SetaYoshi/SMBX-Download
 [Custom Cheats v1.0](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX38A%2FCustom%2520Cheats)  
 [Custom Credits v1.0](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX38A%2FCustom%2520Credits)  
 [Faded Blocks v1.0](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX38A%2FFaded%2520Blocks)  
-
+[Color v1.0](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX38A%2FColor)
 ### Levels
 
 [Cloudy Mountains](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX38A%2FCloudy%2520Mountains)  
