@@ -35,8 +35,8 @@ To download a specific NPC, go [here](https://github.com/SetaYoshi/SMBX-Download
 [Bowser Castle](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FBowser%27s%2520Castle)  
 [Boing](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FBoing)  
 [In the Halls of the Hotel King](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FIn%2520the%2520Halls%2520of%2520the%2520Hotel%2520King)  
-[My Eyes Shine Bright with the City Lights](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FMy%2520Eyes%2520Shine%2520Bright%2520with%2520the%2520City%2520Lights)
-
+[My Eyes Shine Bright with the City Lights](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FSetaYoshi%2FSMBX-Downloads%2Ftree%2Fmain%2FSMBX2%2FMy%2520Eyes%2520Shine%2520Bright%2520with%2520the%2520City%2520Lights)  
+[Redstone Test World](https://download-directory.github.io/?url=https://github.com/SetaYoshi/SMBX-Downloads/tree/main/SMBX2/Redstone%20Test%20World)
 
 
 ## SMBX38A
